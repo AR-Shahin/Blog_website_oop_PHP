@@ -20,15 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2f680f-dd33-4e7c-bc6a-ee7d936485ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/classess/Sesion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/classes/Database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/classes/UserLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Sesion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -48,6 +54,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ffamJUxESq4kec5PrlskOtAZS6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,6 +65,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,7 +80,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596611758478</updated>
-      <workItem from="1596611760634" duration="561000" />
+      <workItem from="1596611760634" duration="4392000" />
+      <workItem from="1596637269549" duration="3432000" />
     </task>
     <servers />
   </component>
@@ -82,11 +98,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="93" key="NewPhpClassDialog" timestamp="1596612104871">
+    <state x="391" y="81" key="#Inspections" timestamp="1596639889991">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="93" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1596612104871" />
+    <state x="391" y="81" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1596639889991" />
+    <state x="465" y="93" key="NewPhpClassDialog" timestamp="1596637311260">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="465" y="93" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1596637311260" />
+    <state x="567" y="325" key="NewPhpFileDialog" timestamp="1596635029514">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="567" y="325" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1596635029514" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/classes/UserLogin.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/admin/logout.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

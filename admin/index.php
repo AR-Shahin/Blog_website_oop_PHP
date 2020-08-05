@@ -1,3 +1,11 @@
+<?php
+require_once '../vendor/autoload.php';
+session_start();
+if(!isset($_SESSION['login-success'])){
+    header('location:login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,7 +148,7 @@
                                 <a href="#">
                                     <span class="photo"><img alt="avatar" src="img/avatar-mini.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Jonathan Smith</span>
+                                    <span class="from"></span>
                                     <span class="time">Just now</span>
                                     </span>
                                     <span class="message">
@@ -255,7 +263,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <img alt="" src="img/avatar1_small.jpg">
-                            <span class="username">Jhon Doue</span>
+                            <span class="username"><?= isset($_SESSION['username']) ? $_SESSION['username'] : '' ;?></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout dropdown-menu-right">
@@ -263,7 +271,7 @@
                             <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                             <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                             <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
-                            <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                            <li><a href="logout.php"><i class="fa fa-key"></i> Log Out</a></li>
                         </ul>
                     </li>
                     <li class="sb-toggle-right">

@@ -1,3 +1,17 @@
+<?php
+
+require_once '../vendor/autoload.php';
+
+if(isset($_POST['login-btn'])){
+    $login = new App\classes\UserLogin();
+     $error_txt = $login->userCheck($_POST);
+}
+session_start();
+if(isset($_SESSION['login-success'])){
+    header('location:index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +24,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.html">
 
-    <title>FlatLab - Flat & Responsive Bootstrap Admin Template</title>
+    <title>Login page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,49 +42,46 @@
 
     <div class="container">
 
-      <form class="form-signin" action="http://thevectorlab.net/flatlab-4/index.html">
+      <form class="form-signin" action="" method="post">
         <h2 class="form-signin-heading">sign in now</h2>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="User ID" autofocus>
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="text" class="form-control" placeholder="User name" autofocus name="username">
+            <input type="password" class="form-control" placeholder="Password" name="password">
             <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right">
                     <a data-toggle="modal" href="#myModal"> Forgot Password?</a>
-
                 </span>
             </label>
-            <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
+            <input type="submit" value="Log In" name="login-btn" class="btn btn-lg btn-login btn-block" >
+            <p style="color: red;"><?= isset($error_txt) ? $error_txt : ''?></p>
         </div>
-
-          <!-- Modal -->
-          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h4 class="modal-title">Forgot Password ?</h4>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                          <p>Enter your e-mail address below to reset your password.</p>
-                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-
-                      </div>
-                      <div class="modal-footer">
-                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                          <button class="btn btn-success" type="button">Submit</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- modal -->
-
       </form>
 
     </div>
+    <!-- Modal -->
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Forgot Password ?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Enter your e-mail address below to reset your password.</p>
+                    <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                    <button class="btn btn-success" type="button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
 
 
     <!-- js placed at the end of the document so the pages load faster -->
