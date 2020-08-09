@@ -5,6 +5,7 @@
 namespace App\classes;
 
 use App\classes\Database;
+use App\classes\Session;
 class UserLogin
 {
     public function userCheck($data)
@@ -21,7 +22,6 @@ class UserLogin
                  session_start();
                  $_SESSION['login-success'] = true;
                  $_SESSION['username'] = $usr;
-
                  header('location:index.php');
              }else{
                $error_text = 'Invalid Username or Password ';

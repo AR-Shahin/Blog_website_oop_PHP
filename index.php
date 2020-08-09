@@ -54,11 +54,11 @@
                         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a class="navbar-brand" href="tech-index.html"><img src="assets/images/version/tech-logo.png" alt=""></a>
+                        <a class="navbar-brand" href="index.php"><img src="assets/images/version/tech-logo.png" alt=""></a>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="tech-index.html">Home</a>
+                                    <a class="nav-link" href="index.php">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="tech-contact.html">Contact Us</a>
@@ -66,69 +66,15 @@
                             </ul>
                             <ul class="navbar-nav mr-2">
                                 <form class="form-inline">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search a Category " aria-label="Search">
+                                    <input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Search" style="cursor: pointer;">
                                 </form>
                             </ul>
                         </div>
                     </nav>
                 </div><!-- end container-fluid -->
             </header><!-- end market-header -->
-
-            <section class="section first-section">
-                <div class="container-fluid">
-                    <div class="masonry-blog clearfix">
-                        <div class="first-slot">
-                            <div class="masonry-box post-media">
-                                <img src="upload/tech_01.jpg" alt="" class="img-fluid">
-                                <div class="shadoweffect">
-                                    <div class="shadow-desc">
-                                        <div class="blog-meta">
-                                            <span class="bg-orange"><a href="tech-category-01.html" title="">Technology</a></span>
-                                            <h4><a href="tech-single.html" title="">Say hello to real handmade office furniture! Clean & beautiful design</a></h4>
-                                            <small><a href="tech-single.html" title="">24 July, 2017</a></small>
-                                            <small><a href="tech-author.html" title="">by Amanda</a></small>
-                                        </div><!-- end meta -->
-                                    </div><!-- end shadow-desc -->
-                                </div><!-- end shadow -->
-                            </div><!-- end post-media -->
-                        </div><!-- end first-side -->
-
-                        <div class="second-slot">
-                            <div class="masonry-box post-media">
-                                <img src="upload/tech_02.jpg" alt="" class="img-fluid">
-                                <div class="shadoweffect">
-                                    <div class="shadow-desc">
-                                        <div class="blog-meta">
-                                            <span class="bg-orange"><a href="tech-category-01.html" title="">Gadgets</a></span>
-                                            <h4><a href="tech-single.html" title="">Do not make mistakes when choosing web hosting</a></h4>
-                                            <small><a href="tech-single.html" title="">03 July, 2017</a></small>
-                                            <small><a href="tech-author.html" title="">by Jessica</a></small>
-                                        </div><!-- end meta -->
-                                    </div><!-- end shadow-desc -->
-                                </div><!-- end shadow -->
-                            </div><!-- end post-media -->
-                        </div><!-- end second-side -->
-
-                        <div class="last-slot">
-                            <div class="masonry-box post-media">
-                                <img src="upload/tech_03.jpg" alt="" class="img-fluid">
-                                <div class="shadoweffect">
-                                    <div class="shadow-desc">
-                                        <div class="blog-meta">
-                                            <span class="bg-orange"><a href="tech-category-01.html" title="">Technology</a></span>
-                                            <h4><a href="tech-single.html" title="">The most reliable Galaxy Note 8 images leaked</a></h4>
-                                            <small><a href="tech-single.html" title="">01 July, 2017</a></small>
-                                            <small><a href="tech-author.html" title="">by Jessica</a></small>
-                                        </div><!-- end meta -->
-                                    </div><!-- end shadow-desc -->
-                                </div><!-- end shadow -->
-                            </div><!-- end post-media -->
-                        </div><!-- end second-side -->
-                    </div><!-- end masonry -->
-                </div>
-            </section>
-
+            <hr>
             <section class="section">
                 <div class="container">
                     <div class="row">
@@ -143,7 +89,7 @@
                                         <div class="col-md-4">
                                             <div class="post-media">
                                                 <a href="tech-single.html" title="">
-                                                    <img src="upload/tech_blog_10.jpg" alt="" class="img-fluid">
+                                                    <img src="assets/upload/tech_blog_10.jpg" alt="" class="img-fluid">
                                                     <div class="hovereffect"></div>
                                                 </a>
                                             </div><!-- end media -->
@@ -152,10 +98,9 @@
                                         <div class="blog-meta big-meta col-md-8">
                                             <h4><a href="tech-single.html" title="">Google has developed a brand new algorithm. Forget all your knowledge!</a></h4>
                                             <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
-                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
-                                            <small><a href="tech-single.html" title="">13 July, 2017</a></small>
-                                            <small><a href="tech-author.html" title="">by Matilda</a></small>
-                                            <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 3331</a></small>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="Category">Gadgets</a></small>
+                                            <small><a  title="Date and Time">13 July, 2017</a></small>
+                                            <small><a  title="Author or Media">by Matilda</a></small>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
                                 </div><!-- end blog-list -->
@@ -367,10 +312,10 @@
                         </div><!-- end col -->
                     </div>
 
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-md-12 text-center">
                             <br>
-                            <div class="copyright">&copy; Tech Blog. Design: <a href="http://html.design">HTML Design</a>.</div>
+                            <div class="copyright">&copy; Tech Blog. Design and Develop by: <a href="http://html.design">AR Shahin</a>.</div>
                         </div>
                     </div>
                 </div><!-- end container -->
