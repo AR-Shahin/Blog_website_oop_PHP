@@ -56,11 +56,23 @@ class Category
         $sql = "UPDATE `categories` SET `category_name`= '$catName', `admin_name` ='$admin' WHERE `id` = $id ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
-            $uptxt = "Category Update Successfully!";
+            $uptxt = "Category Updated Successfully!";
             return $uptxt;
         }else{
             $uptxt = "Category Not Update!";
             return $uptxt;
+        }
+    }
+
+    public function deleteCategory($id){
+        $sql = "DELETE FROM `categories` WHERE `id` = $id";
+        $res = mysqli_query(Database::db(),$sql);
+        if($res){
+            $dltTxt = "Successfully Delete!!";
+            return $dltTxt;
+        }else{
+            $dltTxt = "Not Delete";
+            return $dltTxt;
         }
     }
 

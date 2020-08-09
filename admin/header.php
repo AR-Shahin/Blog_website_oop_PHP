@@ -300,7 +300,7 @@ use App\classes\Session;
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" <?= $page == 'addcategory.php' ? 'class="active"' : '' ?> <?= $page == 'managecategory.php' ? 'class="active"' : '' ?> >
-                        <i class="fa fa-folder"></i>
+                        <i class="fa fa-shield"></i>
                         <span>Categories</span>
                     </a>
                     <ul class="sub">

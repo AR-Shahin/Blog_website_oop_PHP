@@ -5,6 +5,7 @@
             <header class="card-header">
                 <h3 style="display: inline-block;margin-right: 25px;">All Category</h3>
                 <span><b><?= \App\classes\Session::get('uptxt')?></b></span>
+                <span style="color: red"><b><?= \App\classes\Session::get('dltTxt')?></b></span>
             </header>
             <div class="card-body">
                 <div class="table-responsive" tabindex="1" style="overflow: hidden; outline: none;">
@@ -38,7 +39,7 @@
                                         <a href="status.php?id=<?= $row['id']?>&managecat&active" class="btn btn-sm btn-warning"><i class="fa  fa-hand-o-up"></i> Active</a>
                                     <?php } ?>
                                     <a href="" class="btn btn-sm btn-info" data-toggle="modal" data-target="#id<?= $row['id']?>"><i class="fa fa-edit"></i> Edit</a>
-                                    <a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+                                    <a href="delete.php?id=<?= $row['id']?>&managecat" class="btn btn-sm btn-danger"onclick="return confirm('Are you sure ?')"><i class="fa fa-trash-o"></i> Delete</a>
                                 </td>
                             </tr>
                         <?php  }   ?>
@@ -85,5 +86,6 @@ while ($row = mysqli_fetch_assoc($allData)){ ?>
 
 <?php
     \App\classes\Session::unsetSession('uptxt');
+    \App\classes\Session::unsetSession('dltTxt');
 ?>
 <?php require_once 'footer.php'?>
