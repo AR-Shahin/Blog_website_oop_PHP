@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2f680f-dd33-4e7c-bc6a-ee7d936485ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/addpost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/managepost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addcategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/managecategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/managecategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/classes/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Category.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +85,8 @@
       <workItem from="1596900047780" duration="5212000" />
       <workItem from="1596946457325" duration="1558000" />
       <workItem from="1596957867531" duration="6182000" />
-      <workItem from="1596980050982" duration="9588000" />
+      <workItem from="1596980050982" duration="10491000" />
+      <workItem from="1597034725264" duration="1362000" />
     </task>
     <servers />
   </component>
@@ -123,10 +127,10 @@
     </state>
     <state x="414" y="82" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1596959574930" />
     <state x="465" y="93" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1596637311260" />
-    <state x="504" y="288" key="NewPhpFileDialog" timestamp="1596987581381">
+    <state x="504" y="288" key="NewPhpFileDialog" timestamp="1596990326658">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="504" y="288" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1596987581381" />
+    <state x="504" y="288" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1596990326658" />
     <state x="567" y="325" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1596635029514" />
     <state width="623" height="498" key="SwitcherDM" timestamp="1596904629832">
       <screen x="0" y="0" width="1366" height="738" />

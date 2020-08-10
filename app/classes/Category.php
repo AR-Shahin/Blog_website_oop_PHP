@@ -1,10 +1,10 @@
 <?php
 
-
 namespace App\classes;
-use App\classes\Database;
 
+use App\classes\Database;
 use App\classes\Session;
+
 class Category
 {
     public function addCategory($data){
@@ -29,6 +29,9 @@ class Category
         }else{
             return false;
         }
+    }
+    public function countCategory(){
+
     }
     public function inactiveCategory($id){
         $sql = "UPDATE `categories` SET `status` = '0' WHERE `categories`.`id` = $id";

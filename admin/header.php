@@ -308,6 +308,16 @@ use App\classes\Session;
                         <li <?= $page == 'managecategory.php' ? 'class="active"' : '' ?>><a  href="managecategory.php">Manage Category</a></li>
                     </ul>
                 </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" <?= $page == 'addpost.php' ? 'class="active"' : '' ?> <?= $page == 'managepost.php' ? 'class="active"' : '' ?> >
+                        <i class="fa fa-th"></i>
+                        <span>Posts</span>
+                    </a>
+                    <ul class="sub">
+                        <li <?= $page == 'addpost.php' ? 'class="active"' : '' ?>><a  href="addpost.php" >Add Post</a></li>
+                        <li <?= $page == 'managepost.php' ? 'class="active"' : '' ?>><a  href="managepost.php">Manage Post</a></li>
+                    </ul>
+                </li>
             </ul>
             <!-- sidebar menu end-->
         </div>

@@ -3,8 +3,9 @@ require_once '../vendor/autoload.php';
 
 use App\classes\Session;
 Session::init();
-//DELETE CATEGORY
 
+
+//DELETE CATEGORY
 if(isset($_GET['managecat'])){
     $id = $_GET['id'];
     $dlt = new \App\classes\Category();
