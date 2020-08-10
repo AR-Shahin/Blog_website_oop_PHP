@@ -20,13 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2f680f-dd33-4e7c-bc6a-ee7d936485ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/addpost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/managepost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/classes/post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addcategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addpost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/managecategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/managecategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/managepost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/managepost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/classes/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Category.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,13 +67,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/classes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xammp\htdocs\PHP_Learning\blog_project\app\classes" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,7 +94,10 @@
       <workItem from="1596946457325" duration="1558000" />
       <workItem from="1596957867531" duration="6182000" />
       <workItem from="1596980050982" duration="10491000" />
-      <workItem from="1597034725264" duration="1362000" />
+      <workItem from="1597034725264" duration="3844000" />
+      <workItem from="1597045068783" duration="462000" />
+      <workItem from="1597045546339" duration="3079000" />
+      <workItem from="1597067083873" duration="13111000" />
     </task>
     <servers />
   </component>
@@ -118,14 +129,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="260" y="0" key="#PHP/0.0.1366.738@0.0.1366.738" timestamp="1596957936594" />
-    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596982971968">
+    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597079650695">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1596982971968" />
-    <state x="414" y="82" key="NewPhpClassDialog" timestamp="1596959574930">
+    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1597079650695" />
+    <state x="414" y="82" key="NewPhpClassDialog" timestamp="1597045489834">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="414" y="82" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1596959574930" />
+    <state x="414" y="82" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1597045489834" />
     <state x="465" y="93" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1596637311260" />
     <state x="504" y="288" key="NewPhpFileDialog" timestamp="1596990326658">
       <screen x="0" y="0" width="1366" height="738" />

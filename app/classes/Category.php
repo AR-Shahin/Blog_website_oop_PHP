@@ -78,5 +78,13 @@ class Category
             return $dltTxt;
         }
     }
-
+    public function activeCategories(){
+        $sql = "SELECT * FROM `categories` WHERE `status` = 1 ORDER BY id DESC";
+        $res = mysqli_query(Database::db(),$sql);
+        if($res){
+            return $res;
+        }else{
+            return false;
+        }
+    }
 }

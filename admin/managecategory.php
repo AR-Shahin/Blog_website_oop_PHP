@@ -5,7 +5,7 @@
             <header class="card-header">
                 <h3 style="display: inline-block;margin-right: 25px;">All Category</h3>
                 <span><b><?= \App\classes\Session::get('uptxt')?></b></span>
-                <span style="color: red"><b><?= \App\classes\Session::get('dltTxt')?></b></span>
+                <span style="color: red;margin-left: 50px;"><b><?= \App\classes\Session::get('dltTxt')?></b></span>
             </header>
             <div class="card-body">
                 <div class="table-responsive" tabindex="1" style="overflow: hidden; outline: none;">

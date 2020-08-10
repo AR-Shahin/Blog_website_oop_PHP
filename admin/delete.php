@@ -13,3 +13,12 @@ if(isset($_GET['managecat'])){
     Session::set('dltTxt',"$dltTxt");
     header('location:managecategory.php');
 }
+
+//DELETE POST
+if(isset($_GET['managepost'])){
+    $id = $_GET['id'];
+    $dlt = new \App\classes\Post();
+    $dltTxt = $dlt->deletePost($id);
+    Session::set('dltTxt',"$dltTxt");
+    header('location:managepost.php');
+}

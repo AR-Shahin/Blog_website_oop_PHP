@@ -22,4 +22,22 @@ if(isset($_GET['active']) && isset($_GET['managecat'])){
     }
 }
 
+//INACTIVE POST
+if(isset($_GET['inactive']) && isset($_GET['managepost'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\Post();
+    $result = $status->inactivePost($id);
+    if($result == true){
+        header('location: managepost.php');
+    }
+}
+//ACTIVE CATEGORY
+if(isset($_GET['active']) && isset($_GET['managepost'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\Post();
+    $result = $status->activePost($id);
+    if($result == true){
+        header('location: managepost.php');
+    }
+}
 ?>

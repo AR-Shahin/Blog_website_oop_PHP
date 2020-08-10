@@ -174,7 +174,10 @@
 
 <!--right slidebar-->
 <script src="js/slidebars.min.js"></script>
-
+<!--dynamic table initialization -->
+<script type="text/javascript" language="javascript" src="assets/advanced-datatable/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
+<script src="js/dynamic_table_init.js"></script>
 <!--common script for all pages-->
 <script src="js/common-scripts5e1f.js?v=2"></script>
 
@@ -182,7 +185,8 @@
 <script src="js/sparkline-chart.js"></script>
 <script src="js/easy-pie-chart.js"></script>
 <script src="js/count.js"></script>
-
+<!--summernote-->
+<script src="assets/summernote/dist/summernote.min.js"></script>
 <script>
 
     //owl carousel
@@ -210,6 +214,20 @@
     });
 
 </script>
+<script>
 
+    jQuery(document).ready(function(){
+
+        $('.summernote').summernote({
+            height: 200,                 // set editor height
+
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+
+            focus: true                 // set focus to editable area after initializing summernote
+        });
+    });
+
+</script>
 </body>
 </html>
