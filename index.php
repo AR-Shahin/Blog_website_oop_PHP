@@ -1,5 +1,8 @@
 <?php
-
+require_once 'vendor/autoload.php';
+use App\classes\Post;
+$post = Post::showActivelPost();
+$populer = Post::showPopulerlPost();
 ?>
 
 <!DOCTYPE html>
@@ -83,27 +86,33 @@
                                 <div class="blog-top clearfix">
                                     <h4 class="pull-left">Recent News <a href="#"><i class="fa fa-rss"></i></a></h4>
                                 </div><!-- end blog-top -->
-
+<?php
+while ($row = mysqli_fetch_assoc($post)){
+?>
                                 <div class="blog-list clearfix">
                                     <div class="blog-box row">
                                         <div class="col-md-4">
                                             <div class="post-media">
                                                 <a href="tech-single.html" title="">
-                                                    <img src="assets/upload/tech_blog_10.jpg" alt="" class="img-fluid">
+                                                    <img src="uploads/<?= $row['image'] ?>" alt="" class="img-fluid w-100">
                                                     <div class="hovereffect"></div>
                                                 </a>
                                             </div><!-- end media -->
                                         </div><!-- end col -->
 
                                         <div class="blog-meta big-meta col-md-8">
-                                            <h4><a href="tech-single.html" title="">Google has developed a brand new algorithm. Forget all your knowledge!</a></h4>
-                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
-                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="Category">Gadgets</a></small>
-                                            <small><a  title="Date and Time">13 July, 2017</a></small>
-                                            <small><a  title="Author or Media">by Matilda</a></small>
+                                            <h4><a href="tech-single.html" title=""><?= $row['title'] ?></a></h4>
+                                            <p><?= substr($row['content'],0,350) ?></p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="Category"><?= $row['category_name'] ?></a></small>
+                                            <small><a  title="Date and Time"><?= $row['date'] ?></a></small>
+                                            <small><a  title="Author or Media"><?= $row['admin'] ?></a></small>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
-                                </div><!-- end blog-list -->
+                                </div>
+    <hr>
+
+<?php } ?>
+                                <!-- end blog-list -->
                             </div><!-- end page-wrapper -->
 
                             <hr class="invis">
@@ -130,29 +139,17 @@
                                     <h2 class="widget-title">Popular Posts</h2>
                                     <div class="blog-list-widget">
                                         <div class="list-group">
-                                            <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                                <div class="w-100 justify-content-between">
-                                                    <img src="assets/upload/tech_blog_08.jpg" alt="" class="img-fluid float-left">
-                                                    <h5 class="mb-1">5 Beautiful buildings you need..</h5>
-                                                    <small>12 Jan, 2016</small>
-                                                </div>
-                                            </a>
-
-                                            <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                                <div class="w-100 justify-content-between">
-                                                    <img src="assets/upload/tech_blog_01.jpg" alt="" class="img-fluid float-left">
-                                                    <h5 class="mb-1">Let's make an introduction for..</h5>
-                                                    <small>11 Jan, 2016</small>
-                                                </div>
-                                            </a>
-
+                                            <?php
+                                            while ($row1 = mysqli_fetch_assoc($populer)){
+                                            ?>
                                             <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                                 <div class="w-100 last-item justify-content-between">
-                                                    <img src="assets/upload/tech_blog_03.jpg" alt="" class="img-fluid float-left">
-                                                    <h5 class="mb-1">Did you see the most beautiful..</h5>
-                                                    <small>07 Jan, 2016</small>
+                                                    <img src="uploads/<?= $row1['image'] ?>" alt="" class="img-fluid float-left">
+                                                    <h5 class="mb-1"><?= $row1['title'] ?></h5>
+                                                    <small><?= $row1['date'] ?></small>
                                                 </div>
                                             </a>
+                                            <?php } ?>
                                         </div>
                                     </div><!-- end blog-list -->
                                 </div><!-- end widget -->
@@ -275,6 +272,7 @@
                                         <form class="form-inline">
                                             <input type="text" class="form-control" placeholder="Enter your email address">
                                             <button type="submit" class="btn btn-primary">SUBMIT</button>
+
                                         </form>
                                     </div><!-- end newsletter -->
                                 </div><!-- end footer-text -->

@@ -184,7 +184,7 @@
 <!--script for this page-->
 <script src="js/sparkline-chart.js"></script>
 <script src="js/easy-pie-chart.js"></script>
-<script src="js/count.js"></script>
+<script src="js/count.php"></script>
 <!--summernote-->
 <script src="assets/summernote/dist/summernote.min.js"></script>
 <script>

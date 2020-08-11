@@ -31,7 +31,14 @@ class Category
         }
     }
     public function countCategory(){
-
+        $sql = "SELECT * FROM `categories` ";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            $count = mysqli_num_rows($result);
+            return $count;
+        }else{
+            return false;
+        }
     }
     public function inactiveCategory($id){
         $sql = "UPDATE `categories` SET `status` = '0' WHERE `categories`.`id` = $id";

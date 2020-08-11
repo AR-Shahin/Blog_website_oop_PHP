@@ -10,4 +10,12 @@ $upCat = new \App\classes\Category();
 Session::set('uptxt',"$result");
 header('location:managecategory.php');
 }
+
+//POST UPDATE
+if(isset($_POST['update-btn'])){
+    $upPost = new \App\classes\Post();
+    $result = $upPost->updatePost($_POST);
+    Session::set('uptxt',"$result");
+    header('location:managepost.php');
+}
 ?>

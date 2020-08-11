@@ -6,7 +6,6 @@ if(isset($_POST['login-btn'])){
     $login = new App\classes\UserLogin();
      $error_txt = $login->userCheck($_POST);
 }
-session_start();
 if(isset($_SESSION['login-success'])){
     header('location:index.php');
 }
@@ -82,14 +81,10 @@ if(isset($_SESSION['login-success'])){
         </div>
     </div>
     <!-- modal -->
-
-
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
-
   </body>
 
-<!-- Mirrored from thevectorlab.net/flatlab-4/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jul 2019 15:06:10 GMT -->
 </html>

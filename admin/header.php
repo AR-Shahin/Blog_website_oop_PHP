@@ -8,6 +8,9 @@ if(!isset($_SESSION['login-success'])){
 $page = explode('/',$_SERVER['PHP_SELF']);
 $page = end($page);
 use App\classes\Session;
+use App\classes\UserLogin;
+$name = $_SESSION['username'];
+$userData = UserLogin::loginUserData("$name");
 ?>
 
 <!DOCTYPE html>
@@ -270,13 +273,13 @@ use App\classes\Session;
                 <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="img/avatar1_small.jpg">
+                        <img alt="" src="../uploads/<?= $userData['image']?>" style="width: 35px">
                         <span class="username"><?= isset($_SESSION['username']) ? $_SESSION['username'] : '' ;?></span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout dropdown-menu-right">
                         <div class="log-arrow-up"></div>
-                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                        <li><a href="profile.php"><i class=" fa fa-suitcase"></i>Profile</a></li>
                         <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                         <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
                         <li><a href="logout.php"><i class="fa fa-key"></i> Log Out</a></li>
@@ -314,7 +317,7 @@ use App\classes\Session;
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" <?= $page == 'addpost.php' ? 'class="active"' : '' ?> <?= $page == 'managepost.php' ? 'class="active"' : '' ?> >
-                        <i class="fa fa-th"></i>
+                        <i class="fa fa-thumb-tack"></i>
                         <span>Posts</span>
                     </a>
                     <ul class="sub">

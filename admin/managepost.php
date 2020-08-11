@@ -46,8 +46,14 @@
                                     <?php  }else{ ?>
                                         <a href="status.php?id=<?= $row['id']?>&managepost&active" class="btn btn-sm btn-warning"><i class="fa  fa-hand-o-up"></i> Active</a>
                                     <?php } ?>
+                                    <?php
+                                    if($row['rate'] == 1) { ?>
+                                        <a href="status.php?id=<?= $row['id']?>&managepost&inactive" class="btn btn-sm btn-dark"><i class="fa  fa-hand-o-down"></i> Down</a>
+                                    <?php  }else{ ?>
+                                        <a href="status.php?id=<?= $row['id']?>&managepost&active" class="btn btn-sm btn-secondary"><i class="fa  fa-hand-o-up"></i> Top</a>
+                                    <?php } ?>
                                     <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#id<?= $row['id']?>"><i class="fa fa-eye"></i> View</a>
-                                    <a href="" class="btn btn-sm btn-info"<i class="fa fa-edit"></i> Edit</a>
+                                    <a href="updatepost.php?id=<?= $row['id']?>&updatepost" class="btn btn-sm btn-info"><i class="fa fa-pencil-square-o"></i> Edit</a>
                                     <a href="delete.php?id=<?= $row['id']?>&managepost" class="btn btn-sm btn-danger"onclick="return confirm('Are you sure ?')"><i class="fa fa-trash-o"></i> Delete</a>
                                 </td>
                             </tr>
@@ -62,12 +68,13 @@
 use App\classes\Post;
 $allData = Post::showAllPost();
 while ($row = mysqli_fetch_assoc($allData)){ ?>
+
     <!-- VIEW POST Modal -->
 <div class="modal fade " id="id<?= $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-lg" role="document" style="overflow: hidden">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><?= $row['title']?></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Title : <?= $row['title']?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -92,11 +99,11 @@ while ($row = mysqli_fetch_assoc($allData)){ ?>
                         </tr>
                         <tr>
                             <th>Content</th>
-                            <td><?= ucwords($row['content'])?></td>
+                            <td><?= $row['content']?></td>
                         </tr>
                         <tr>
                             <td>Image</td>
-                            <td class="text-center"><img class="w-100" src="../uploads/<?= $row['image']?>" alt=""></td>
+                            <td class="text-center"><img width="200px" src="../uploads/<?= $row['image']?>" alt=""></td>
                         </tr>
                     </table>
                 </div>
