@@ -48,9 +48,9 @@
                                     <?php } ?>
                                     <?php
                                     if($row['rate'] == 1) { ?>
-                                        <a href="status.php?id=<?= $row['id']?>&managepost&inactive" class="btn btn-sm btn-dark"><i class="fa  fa-hand-o-down"></i> Down</a>
+                                        <a href="status.php?id=<?= $row['id']?>&managepost&makedown" class="btn btn-sm btn-dark"><i class="fa  fa-hand-o-down"></i> Down</a>
                                     <?php  }else{ ?>
-                                        <a href="status.php?id=<?= $row['id']?>&managepost&active" class="btn btn-sm btn-secondary"><i class="fa  fa-hand-o-up"></i> Top</a>
+                                        <a href="status.php?id=<?= $row['id']?>&managepost&maketop" class="btn btn-sm btn-secondary"><i class="fa  fa-hand-o-up"></i> Top</a>
                                     <?php } ?>
                                     <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#id<?= $row['id']?>"><i class="fa fa-eye"></i> View</a>
                                     <a href="updatepost.php?id=<?= $row['id']?>&updatepost" class="btn btn-sm btn-info"><i class="fa fa-pencil-square-o"></i> Edit</a>
@@ -96,6 +96,10 @@ while ($row = mysqli_fetch_assoc($allData)){ ?>
                         <tr>
                             <th>Date</th>
                             <td><?= $row['date']?></td>
+                        </tr>
+                        <tr>
+                            <th>Tags</th>
+                            <td><?= $row['tag']?></td>
                         </tr>
                         <tr>
                             <th>Content</th>

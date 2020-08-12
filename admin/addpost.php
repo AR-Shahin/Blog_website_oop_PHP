@@ -42,6 +42,14 @@ $allCat = Category::activeCategories();
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-3">
+                                <b>Tags</b>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" name="tag" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3">
                                 <b>Image</b>
                             </div>
                             <div class="col-sm-9">

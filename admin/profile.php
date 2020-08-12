@@ -61,6 +61,9 @@ $userData = UserLogin::loginUserData("$name");
                     <div class="bio-row">
                         <p><span>Mobile </span>: (12) 03 4567890</p>
                     </div>
+                    <div class="bio-row">
+                        <p><span>Username </span>:  <?= $userData['username'] ?></p>
+                    </div>
                 </div>
             </div>
         </section>

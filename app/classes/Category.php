@@ -30,6 +30,25 @@ class Category
             return false;
         }
     }
+    public function showLimitCategory(){
+        $sql = "SELECT * FROM `categories` ORDER BY id DESC LIMIT 1,5";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            return $result;
+        }else{
+            return false;
+        }
+    }
+    public function countCategoryPost($id){
+        $sql = "SELECT * FROM blog WHERE cat_id = $id";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            $row = mysqli_num_rows($result);
+            return $row;
+        }else{
+            return false;
+        }
+    }
     public function countCategory(){
         $sql = "SELECT * FROM `categories` ";
         $result = mysqli_query(Database::db(),$sql);

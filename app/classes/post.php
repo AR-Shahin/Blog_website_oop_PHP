@@ -14,6 +14,7 @@ class Post
         $title = $data['title'];
         $title = Helper::filter("$title");
         $content = $data['content'];
+        $tag = $data['tag'];
         $content = Helper::filter("$content");
         $status = $data['status'];
         $admin = Session::get('username');
@@ -25,7 +26,7 @@ class Post
             Session::set('extError',"Image should be png");
             header('location:addpost.php');
         }
-        $sql = "INSERT INTO `blog` (`cat_id`, `title`, `content`, `admin`, `status`, `image`) VALUES ('$cat_id','$title','$content','$admin','$status','$image')";
+        $sql = "INSERT INTO `blog` (`cat_id`, `title`, `content`,`tag`, `admin`, `status`, `image`) VALUES ('$cat_id','$title','$content','$tag','$admin','$status','$image')";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
             $upload = '../uploads/' . $image;
@@ -65,7 +66,7 @@ class Post
         }
     }
     public function showPopulerlPost(){
-        $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.rate = 1 ORDER BY id ASC LIMIT 0,3 ";
+        $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.rate = 1 ORDER BY id DESC ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
             return $result;
@@ -83,8 +84,26 @@ class Post
             return false;
         }
     }
+    public function inactiveRate($id){
+        $sql = "UPDATE `blog` SET `rate` = '0' WHERE `blog`.`id` = $id";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function activePost($id){
         $sql = "UPDATE `blog` SET `status` = '1' WHERE `blog`.`id` = $id";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function activeRate($id){
+        $sql = "UPDATE `blog` SET `rate` = '1' WHERE `blog`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
             return true;
@@ -108,9 +127,13 @@ class Post
     }
     //SINGLE POST
     public function singlePost($id){
-        $sql = "SELECT * FROM `blog` WHERE `id` = $id";
+        # $sql = "SELECT * FROM `blog` WHERE `id` = $id";
+        $sql = "SELECT blog.*,categories.category_name  FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.id = $id ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
+            if(mysqli_num_rows($result) == 0){
+                return false;
+            }
             return $result;
         }else{
             return false;
@@ -137,11 +160,12 @@ class Post
         $title = $data['title'];
         $title = Helper::filter($title);
         $content = $data["content"];
+        $tag = $data['tag'];
         $content = Helper::filter($content);
         $status = $data['status'];
         $admin = Session::get('username');
         if($_FILES['image']['name'] == NULL){
-            $sql = "UPDATE `blog` SET `cat_id` = '$cat_id',`title`= '$title',`content`= '$content',`admin`= '$admin',`status`= $status WHERE id = $id";
+            $sql = "UPDATE `blog` SET `cat_id` = '$cat_id',`title`= '$title',`content`= '$content',`tag` = '$tag',`admin`= '$admin',`status`= $status WHERE id = $id";
         }else{
             $image = $_FILES['image']['name'];
             $img_ext = pathinfo($_FILES['image']['name'],PATHINFO_EXTENSION);
@@ -151,7 +175,7 @@ class Post
                 Session::set('extError',"Image should be png");
                 header('location:managepost.php');
             }
-            $sql = "UPDATE `blog` SET `cat_id` = '$cat_id',`title`= '$title',`content`= '$content',`admin`= '$admin', `image` = '$image' ,`status`= $status WHERE id = $id";
+            $sql = "UPDATE `blog` SET `cat_id` = '$cat_id',`title`= '$title',`content`= '$content',`tag` = '$tag',`admin`= '$admin', `image` = '$image' ,`status`= $status WHERE id = $id";
             $upload = '../uploads/' . $image;
             move_uploaded_file($_FILES['image']['tmp_name'],$upload);
             $path=  $this->findSingleImage($id);
@@ -185,6 +209,33 @@ class Post
         if($result){
             $count = mysqli_num_rows($result);
             return $count;
+        }else{
+            return false;
+        }
+    }
+    public function categoryWisePost($id){
+        $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.status = 1 AND blog.cat_id = $id ";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            $row = mysqli_num_rows($result);
+            if($row>0){
+                return $result;
+            }
+            return false;
+        }else{
+            return false;
+        }
+    }
+
+    public function searchPost($data){
+        $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.content LIKE '%$data%' AND blog.status = 1 ";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            $row = mysqli_num_rows($result);
+            if($row>0){
+                return $result;
+            }
+            return false;
         }else{
             return false;
         }

@@ -52,6 +52,14 @@ if(isset($_GET['updatepost'])){
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-3">
+                                <b>Tags</b>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" name="tag" class="form-control" value="<?= $postData['tag'] ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3">
                                 <b>Image</b>
                             </div>
                             <div class="col-sm-9">
