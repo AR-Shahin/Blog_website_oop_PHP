@@ -39,8 +39,8 @@
                             use App\classes\Category;
                             $popu = Category::showLimitCategory();
                             while ($cat = mysqli_fetch_assoc($popu)){
-                            ?>
-                            <li><a href="index.php?id=<?= $cat['id']?>&catwisepost"><?= $cat['category_name'] ?> <span><?php echo Category::countCategoryPost($cat['id']);?></span></a></li>
+                                ?>
+                                <li><a href="index.php?id=<?= $cat['id']?>&catwisepost"><?= $cat['category_name'] ?> <span><?php echo Category::countCategoryPost($cat['id']);?></span></a></li>
                             <?php } ?>
                         </ul>
                     </div><!-- end link-widget -->

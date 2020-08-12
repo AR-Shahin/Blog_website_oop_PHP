@@ -18,5 +18,11 @@ if(isset($_POST['post-btn'])){
     Session::set('postInsert',"$insert_post");
     header('location:addpost.php');
 }
-
+//USER INSERT
+if(isset($_POST['user-btn'])){
+    $userOb = new \App\classes\UserLogin();
+   $rtn_txt =  $userOb->addUser($_POST);
+   Session::set('userExists',"$rtn_txt");
+    header('location:adduser.php');
+}
 ?>

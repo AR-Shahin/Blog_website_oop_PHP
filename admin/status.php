@@ -58,4 +58,31 @@ if(isset($_GET['maketop']) && isset($_GET['managepost'])){
         header('location: managepost.php');
     }
 }
+//UNBLK USER
+if(isset($_GET['unblock']) && isset($_GET['manageuser'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\UserLogin();
+    $result = $status->userUnblock($id);;
+    if($result == true){
+        header('location: manageuser.php');
+    }
+}
+//UNBLK USER
+if(isset($_GET['block']) && isset($_GET['manageuser'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\UserLogin();
+    $result = $status->userBlock($id);
+    if($result == true){
+        header('location: manageuser.php');
+    }
+}
+//MAKE ADMIN USER
+if(isset($_GET['admin']) && isset($_GET['manageuser'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\UserLogin();
+    $result = $status->makeAdmin($id);
+    if($result == true){
+        header('location: manageuser.php');
+    }
+}
 ?>

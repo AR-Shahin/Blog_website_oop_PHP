@@ -325,6 +325,20 @@ $userData = UserLogin::loginUserData("$name");
                         <li <?= $page == 'managepost.php' ? 'class="active"' : '' ?>><a  href="managepost.php">Manage Post</a></li>
                     </ul>
                 </li>
+                <!-- adduser only admin -->
+                <?php
+                if($userData['role'] == 1){ ?>
+                <li class="sub-menu">
+                    <a href="javascript:;" <?= $page == 'adduser.php' ? 'class="active"' : '' ?> <?= $page == 'manageuser.php' ? 'class="active"' : '' ?> >
+                        <i class="fa fa-users"></i>
+                        <span>Users</span>
+                    </a>
+                    <ul class="sub">
+                        <li <?= $page == 'adduser.php' ? 'class="active"' : '' ?>><a  href="adduser.php" >Add User</a></li>
+                        <li <?= $page == 'manageuser.php' ? 'class="active"' : '' ?>><a  href="manageuser.php">Manage Users</a></li>
+                    </ul>
+                </li>
+                <?php } ?>
             </ul>
             <!-- sidebar menu end-->
         </div>

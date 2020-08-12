@@ -12,7 +12,7 @@ $userData = UserLogin::loginUserData("$name");
     <aside class="profile-nav col-lg-3">
         <section class="card">
             <div class="user-heading round">
-                <a href="#">
+                <a href="">
                     <img src="../uploads/<?= $userData['image']?>" alt="">
                 </a>
                 <h1><?= $userData['fname'] . $userData['lname'] ?></h1>
@@ -51,6 +51,8 @@ $userData = UserLogin::loginUserData("$name");
                             <?php
                             if($userData['role'] == 1){
                                 echo 'Admin';
+                            }else{
+                                echo 'Editor';
                             }
                             ?>
                         </p>

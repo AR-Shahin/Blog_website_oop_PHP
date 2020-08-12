@@ -10,7 +10,7 @@
                 $id = $_GET['id'];
                 $catWisepost = \App\classes\Post::categoryWisePost($id);
                 if($catWisepost == false){
-                    echo '<h1 class="text-center">Not Found !!</h1>';
+                    echo '<h1 class="text-center">Not Avilable  !!</h1>';
                 }else{
                     while ($catWisepostRow = mysqli_fetch_assoc($catWisepost)) { ?>
                         <div class="blog-list clearfix">
@@ -41,7 +41,7 @@
                 $searchContent = $_GET['search'];
                 $var = \App\classes\Post::searchPost($searchContent);
                 if($var == false){
-                    echo 'nai kichu';
+                    echo '<h1 class="text-center">Not Avilable  !!</h1>';
                 }else{
                     while ($rowSearch = mysqli_fetch_assoc($var)){ ?>
                         <div class="blog-list clearfix">

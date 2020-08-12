@@ -22,3 +22,11 @@ if(isset($_GET['managepost'])){
     Session::set('dltTxt',"$dltTxt");
     header('location:managepost.php');
 }
+//DELETE user
+if(isset($_GET['manageuser'])){
+    $id = $_GET['id'];
+    $dlt = new \App\classes\UserLogin();
+    $dltTxt = $dlt->deleteUser($id);
+    Session::set('dltTxt',"$dltTxt");
+    header('location:manageuser.php');
+}

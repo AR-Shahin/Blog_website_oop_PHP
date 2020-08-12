@@ -18,4 +18,11 @@ if(isset($_POST['update-btn'])){
     Session::set('uptxt',"$result");
     header('location:managepost.php');
 }
+//USER UPDATE
+if(isset($_POST['update-user'])){
+    $upUser = new \App\classes\UserLogin();
+    $result = $upUser->updateUser($_POST);
+    Session::set('uptxt',"$result");
+    header('location:editprofile.php');
+}
 ?>
