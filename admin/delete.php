@@ -30,3 +30,10 @@ if(isset($_GET['manageuser'])){
     Session::set('dltTxt',"$dltTxt");
     header('location:manageuser.php');
 }
+//DELETE TRASH EMAIL
+if(isset($_GET['trashpage'])){
+    $id = $_GET['id'];
+    $dlt = new \App\classes\Mail();
+    $dltTxt = $dlt->deleteMail($id);
+    header('location:inbox.php');
+}

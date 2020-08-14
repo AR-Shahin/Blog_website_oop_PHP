@@ -1,6 +1,12 @@
 </div><!-- end row -->
 </div><!-- end container -->
 </section>
+
+<?php
+use App\classes\Site;
+$ob = Site::displaySocialLink();
+$data = mysqli_fetch_assoc($ob);
+?>
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -10,11 +16,11 @@
                         <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
                         <p>Tech Blog is a technology blog, we sharing marketing, news and gadget articles.</p>
                         <div class="social">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                            <a href="<?= $data['facebook']?>" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="<?= $data['twitter']?>" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="<?= $data['instagram']?>" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="<?= $data['github']?>" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+                            <a href="<?= $data['linkedin']?>" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
                         </div>
 
                         <hr class="invis">
@@ -66,7 +72,7 @@
         <div class="row" >
             <div class="col-md-12 text-center">
                 <br>
-                <div class="copyright">&copy; Tech Blog. Design and Develop by: <a href="http://html.design">AR Shahin</a>.</div>
+                <div class="copyright"> <?= $siteData['footer']?> <a href="<?= $data['footerlink']?>"><?= $data['footertxt']?></a>.</div>
             </div>
         </div>
     </div><!-- end container -->

@@ -1,6 +1,9 @@
 <?php
 require_once 'vendor/autoload.php';
 use App\classes\Post;
+use App\classes\Site;
+$ob = Site::display();
+$siteData = mysqli_fetch_assoc($ob);
 $post = Post::showActivelPost();
 $populer = Post::showPopulerlPost();
 ?>
@@ -57,7 +60,7 @@ $populer = Post::showPopulerlPost();
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><img src="assets/images/version/tech-logo.png" alt=""></a>
+                <a class="navbar-brand" href="index.php"><img src="uploads/<?= $siteData['logo']?>" alt=""></a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">

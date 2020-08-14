@@ -22,8 +22,8 @@
                         <tbody>
                         <?php
                         require_once '../vendor/autoload.php';
-                        $allCat = new \App\classes\UserLogin();
-                        $data = $allCat->allUser();
+                        $allUser = new \App\classes\UserLogin();
+                        $data = $allUser->allUser();
                         $i=0;
                         while ($row = mysqli_fetch_assoc($data)){ ?>
                             <tr>

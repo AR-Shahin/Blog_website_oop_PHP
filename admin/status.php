@@ -85,4 +85,22 @@ if(isset($_GET['admin']) && isset($_GET['manageuser'])){
         header('location: manageuser.php');
     }
 }
+//SEEN MSG
+if(isset($_GET['seen']) && isset($_GET['inbox-body'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\Mail();
+    $result = $status->seenMail($id);
+    if($result == true){
+        header('location: inbox.php');
+    }
+}
+//TRASH MSG
+if(isset($_GET['trash']) && isset($_GET['inbox-body'])){
+    $id =  $_GET['id'];
+    $status = new \App\classes\Mail();
+    $result = $status->makeTrashMail($id);
+    if($result == true){
+        header('location: inbox.php');
+    }
+}
 ?>

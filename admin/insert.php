@@ -25,4 +25,12 @@ if(isset($_POST['user-btn'])){
    Session::set('userExists',"$rtn_txt");
     header('location:adduser.php');
 }
+//reply INSERT
+if(isset($_POST['reply-btn'])){
+    $userOb = new \App\classes\Mail();
+    $rtn_txt =  $userOb->saveReply($_POST);
+    header('location:inbox.php');
+}
+
+
 ?>

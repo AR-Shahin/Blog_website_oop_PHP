@@ -9,6 +9,7 @@ $page = explode('/',$_SERVER['PHP_SELF']);
 $page = end($page);
 use App\classes\Session;
 use App\classes\UserLogin;
+Use App\classes\Mail;
 $name = $_SESSION['username'];
 $userData = UserLogin::loginUserData("$name");
 ?>
@@ -148,7 +149,7 @@ $userData = UserLogin::loginUserData("$name");
                 <li id="header_inbox_bar" class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="badge badge-danger">5</span>
+                        <span class="badge badge-danger"><?= Mail::countNewMail() ?></span>
                     </a>
                     <ul class="dropdown-menu extended inbox">
                         <div class="notify-arrow notify-arrow-red"></div>
@@ -328,17 +329,36 @@ $userData = UserLogin::loginUserData("$name");
                 <!-- adduser only admin -->
                 <?php
                 if($userData['role'] == 1){ ?>
+                    <li class="sub-menu">
+                        <a href="javascript:;" <?= $page == 'adduser.php' ? 'class="active"' : '' ?> <?= $page == 'manageuser.php' ? 'class="active"' : '' ?> >
+                            <i class="fa fa-users"></i>
+                            <span>Users</span>
+                        </a>
+                        <ul class="sub">
+                            <li <?= $page == 'adduser.php' ? 'class="active"' : '' ?>><a  href="adduser.php" >Add User</a></li>
+                            <li <?= $page == 'manageuser.php' ? 'class="active"' : '' ?>><a  href="manageuser.php">Manage Users</a></li>
+                        </ul>
+                    </li>
+                <?php } ?>
                 <li class="sub-menu">
-                    <a href="javascript:;" <?= $page == 'adduser.php' ? 'class="active"' : '' ?> <?= $page == 'manageuser.php' ? 'class="active"' : '' ?> >
-                        <i class="fa fa-users"></i>
-                        <span>Users</span>
+                    <a href="javascript:;" <?= $page == 'inbox.php' ? 'class="active"' : '' ?> <?= $page == 'draft.php' ? 'class="active"' : '' ?> <?= $page == 'trash.php' ? 'class="active"' : '' ?><?= $page == 'sentmail.php' ? 'class="active"' : '' ?>>
+                        <i class="fa fa-envelope-o"></i>
+                        <span>Mail</span>
                     </a>
                     <ul class="sub">
-                        <li <?= $page == 'adduser.php' ? 'class="active"' : '' ?>><a  href="adduser.php" >Add User</a></li>
-                        <li <?= $page == 'manageuser.php' ? 'class="active"' : '' ?>><a  href="manageuser.php">Manage Users</a></li>
+                        <li <?= $page == 'inbox.php' ? 'class="active"' : '' ?> <?= $page == 'draft.php' ? 'class="active"' : '' ?> <?= $page == 'trash.php' ? 'class="active"' : '' ?><?= $page == 'sentmail.php' ? 'class="active"' : '' ?>><a  href="inbox.php" >Manage Mail</a></li>
                     </ul>
                 </li>
-                <?php } ?>
+                <li class="sub-menu">
+                    <a href="javascript:;" <?= $page == 'logo.php' ? 'class="active"' : '' ?> <?= $page == 'social.php' ? 'class="active"' : '' ?> >
+                        <i class="fa  fa-globe"></i>
+                        <span>Site Identity</span>
+                    </a>
+                    <ul class="sub">
+                        <li <?= $page == 'logo.php' ? 'class="active"' : '' ?>><a  href="logo.php" >Logo & Footer</a></li>
+                        <li <?= $page == 'social.php' ? 'class="active"' : '' ?>><a  href="social.php" >Social Media</a></li>
+                    </ul>
+                </li>
             </ul>
             <!-- sidebar menu end-->
         </div>

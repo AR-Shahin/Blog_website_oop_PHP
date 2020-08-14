@@ -20,22 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2f680f-dd33-4e7c-bc6a-ee7d936485ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/404.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/adduser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/manageuser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/social.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/classes/Site.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/draft.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/draft.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/editprofile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editprofile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inbox-body.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inbox-body.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inbox.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mailHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mailHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manageuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manageuser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/sentmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/sentmail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/trash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/classes/UserLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/UserLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/version/tech-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/851552.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/logo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/omor.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +120,17 @@
       <workItem from="1597192309359" duration="13254000" />
       <workItem from="1597217820590" duration="5997000" />
       <workItem from="1597224223969" duration="1270000" />
-      <workItem from="1597238264831" duration="7645000" />
+      <workItem from="1597238264831" duration="8277000" />
+      <workItem from="1597291529317" duration="4038000" />
+      <workItem from="1597305120889" duration="4414000" />
+      <workItem from="1597316832044" duration="10647000" />
+      <workItem from="1597333646372" duration="623000" />
+      <workItem from="1597374604864" duration="92000" />
+      <workItem from="1597374941253" duration="4015000" />
+      <workItem from="1597380963125" duration="2975000" />
+      <workItem from="1597385273301" duration="2351000" />
+      <workItem from="1597392656856" duration="3994000" />
+      <workItem from="1597411166929" duration="5671000" />
     </task>
     <servers />
   </component>
@@ -144,19 +162,19 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="260" y="0" key="#PHP/0.0.1366.738@0.0.1366.738" timestamp="1596957936594" />
-    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597244152725">
+    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597413697556">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1597244152725" />
-    <state x="414" y="82" key="NewPhpClassDialog" timestamp="1597121398972">
+    <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1597413697556" />
+    <state x="414" y="82" key="NewPhpClassDialog" timestamp="1597385957814">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="414" y="82" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1597121398972" />
+    <state x="414" y="82" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1597385957814" />
     <state x="465" y="93" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1596637311260" />
-    <state x="504" y="288" key="NewPhpFileDialog" timestamp="1597225353840">
+    <state x="504" y="288" key="NewPhpFileDialog" timestamp="1597383922160">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="504" y="288" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1597225353840" />
+    <state x="504" y="288" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1597383922160" />
     <state x="567" y="325" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1596635029514" />
     <state width="623" height="498" key="SwitcherDM" timestamp="1596904629832">
       <screen x="0" y="0" width="1366" height="738" />
@@ -167,13 +185,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/classes/UserLogin.php</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/classes/Post.php</url>
-          <line>44</line>
+          <url>file://$PROJECT_DIR$/header.php</url>
+          <line>5</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

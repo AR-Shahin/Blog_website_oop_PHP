@@ -22,7 +22,19 @@ if(isset($_POST['update-btn'])){
 if(isset($_POST['update-user'])){
     $upUser = new \App\classes\UserLogin();
     $result = $upUser->updateUser($_POST);
-    Session::set('uptxt',"$result");
     header('location:editprofile.php');
+}
+
+//SITE UPDATE
+if(isset($_POST['site-btn'])){
+    $upUser = new \App\classes\Site();
+    $result = $upUser->updateSite($_POST);
+    header('location:logo.php');
+}
+//SITE LINKS UPDATE
+if(isset($_POST['link-btn'])){
+    $upUser = new \App\classes\Site();
+    $result = $upUser->updateSocialLink($_POST);
+    header('location:social.php');
 }
 ?>

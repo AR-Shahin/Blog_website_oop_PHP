@@ -28,8 +28,11 @@ $userData = UserLogin::loginUserData("$name");
     <aside class="profile-info col-lg-9">
         <div class="panel-body bio-graph-info">
             <h1>Update Profile Info</h1>
-            <h6><i><?= \App\classes\Session::get('uptxt')?></i></h6>
-            <form class="form-horizontal" role="form" action="update.php" method="post">
+            <h6 style="color: green"><i><?= \App\classes\Session::get('successUserUpdate')?></i></h6>
+            <h6 style="color: red"><i><?= \App\classes\Session::get('failUserUpdate')?></i></h6>
+            <h6 style="color: red"><i><?= \App\classes\Session::get('extError')?></i></h6>
+            <h6 style="color: red"><i><?= \App\classes\Session::get('successserUpdate')?></i></h6>
+            <form class="form-horizontal" role="form" action="update.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="col-lg-2 control-label">About Me</label>
                     <div class="col-lg-10">
@@ -68,9 +71,15 @@ $userData = UserLogin::loginUserData("$name");
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Username</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="mobile" name="username" placeholder=" " value="<?= $userData['username'] ?>">
+                        <input readonly type="text" class="form-control" id="mobile" name="username" placeholder=" " value="<?= $userData['username'] ?>">
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Image</label>
+                    <div class="col-lg-6">
+                        <input type="file" class="form-control" id="mobile" name="image" placeholder=" ">
+                    </div>
+                </div
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
                         <input type="submit" class="btn btn-success" name="update-user" value="Save"></input>
@@ -81,6 +90,9 @@ $userData = UserLogin::loginUserData("$name");
     </aside>
 </div>
 <?php
-\App\classes\Session::unsetSession('uptxt');
+\App\classes\Session::unsetSession('successUserUpdate');
+\App\classes\Session::unsetSession('failUserUpdate');
+\App\classes\Session::unsetSession('successserUpdate');
+\App\classes\Session::unsetSession('extError');
 ?>
 <?php require_once 'footer.php'?>

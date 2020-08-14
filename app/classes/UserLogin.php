@@ -137,25 +137,45 @@ class UserLogin
             }
         }
     }
-    /*public function updateUser($data){
+    public function updateUser($data){
         $fname = $data['fname'];
         $lname = $data['lname'];
         $bio = $data['bio'];
         $email = $data['email'];
         $username = $data['username'];
-        $id = $data['id']; $sql = "UPDATE `users` SET `fname` = '$fname',`lname`='$lname',`username` = '$username',`email`='$email',`bio`= '$bio' WHERE `id` = '$id'";
+        $id = $data['id'];
+
+        if($_FILES['image']['name'] == NULL){
+            $sql = "UPDATE `users` SET `fname` = '$fname',`lname`='$lname',`username` = '$username',`email`='$email',`bio`= '$bio' WHERE `id` = $id";
+        }else{
+            $image = $_FILES['image']['name'];
+            $img_ext = pathinfo($_FILES['image']['name'],PATHINFO_EXTENSION);
+            $image = rand(1,888888). '.' .$img_ext;
+            $ext =  $this->imageChecker($img_ext);
+            if($ext == false){
+                Session::set('extError',"Image should be png");
+                header('location:editprofile.php');
+                return;
+            }
+            $sql = "UPDATE `users` SET `fname` = '$fname',`lname`='$lname',`username` = '$username',`email`='$email',`image` = '$image',`bio`= '$bio' WHERE `id` = '$id'";
+            $upload = '../uploads/' . $image;
+            move_uploaded_file($_FILES['image']['tmp_name'],$upload);
+            $path=  $this->findSingleImage($id);
+            $dltImg = '../uploads/'. $path;
+            unlink($dltImg);
+        }
         $result = mysqli_query(Database::db(),$sql);
         if($result){
-            $uptxt = "Post Updated Successfully!";
-            return $uptxt;
+          Session::set('successUserUpdate',"Update Successfully!");
+            return ;
         }else{
-            $uptxt = "Post Not Update!";
-            return $uptxt;
+            Session::set('failUserUpdate',"Update Not Successfully!");
+            return ;
         }
 
-    }*/
+    }
     public function allUser(){
-        $sql = "SELECT * FROM `users`";
+        $sql = "SELECT * FROM `users` ORDER BY id DESC";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
             return $result;
@@ -206,14 +226,14 @@ class UserLogin
         }
     }
     public function imageChecker($ext){
-        if($ext == '' ||$ext == 'jpg' || $ext == 'jpeg' || $ext == 'png' || $ext == 'PNG' || $ext == 'JPG' || $ext == 'JPEG'){
+        if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'png' || $ext == 'PNG' || $ext == 'JPG' || $ext == 'JPEG'){
             return true;
         }else{
             return false;
         }
     }
     public function findSingleImage($id){
-        $sql = "SELECT `image` FROM `blog` WHERE `id` = $id";
+        $sql = "SELECT `image` FROM `users` WHERE `id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
             if(mysqli_num_rows($result) == 0){
