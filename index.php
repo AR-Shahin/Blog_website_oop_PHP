@@ -50,7 +50,7 @@ use App\classes\Helper;
                 $searchContent = $_GET['search'];
                 $var = \App\classes\Post::searchPost($searchContent);
                 if($var == false){
-                    echo '<h1 class="text-center">Not Avilable  !!</h1>';
+                    echo '<h1 class="text-center">Not Avilable Post !!</h1>';
                 }else{
                     while ($rowSearch = mysqli_fetch_assoc($var)){ ?>
                         <div class="blog-list clearfix">

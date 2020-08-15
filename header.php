@@ -6,6 +6,15 @@ $ob = Site::display();
 $siteData = mysqli_fetch_assoc($ob);
 #$post = Post::showActivelPost();
 $populer = Post::showPopulerlPost();
+$page = explode('/',$_SERVER['PHP_SELF']);
+$page = end($page);
+$title = '';
+if($page == 'index.php'){
+    $title = 'Home';
+}
+elseif ($page == 'contact.php'){
+    $title = 'Contact';
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +28,7 @@ $populer = Post::showPopulerlPost();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Site Metas -->
-    <title><?= $siteData['title']?></title>
+    <title><?= $title . ' | ' . $siteData['title']?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -67,7 +76,7 @@ $populer = Post::showPopulerlPost();
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact Us</a>
+                            <a class="nav-link" href="contact.php">Contact Us </a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mr-2">

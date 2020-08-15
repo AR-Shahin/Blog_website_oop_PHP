@@ -4,7 +4,6 @@ session_start();
 if(!isset($_SESSION['login-success'])){
     header('location:login.php');
 }
-
 $page = explode('/',$_SERVER['PHP_SELF']);
 $page = end($page);
 use App\classes\Session;
@@ -12,6 +11,27 @@ use App\classes\UserLogin;
 Use App\classes\Mail;
 $name = $_SESSION['username'];
 $userData = UserLogin::loginUserData("$name");
+$title = '';
+if($page == 'index.php'){
+    $title = 'Home';
+}elseif($page == 'addcategory.php' || $page == 'managecategory.php'){
+    $title = 'Category';
+}
+elseif($page == 'addpost.php' || $page == 'managepost.php'){
+    $title = 'Post';
+}
+elseif($page == 'adduser.php' || $page =='manageuser.php'){
+    $title = 'User';
+}
+elseif($page == 'inbox.php' || $page =='sentmail.php' || $page =='draft.php' || $page =='strash.php'){
+    $title = 'Mail';
+}
+elseif($page == 'logo.php' || $page =='social.php'){
+    $title = 'Site Identity';
+}
+else{
+    $title = 'Home';
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +45,7 @@ $userData = UserLogin::loginUserData("$name");
     <link rel="shortcut icon" href="img/favicon.html">
     <!--  summernote -->
     <link href="assets/summernote/dist/summernote.css" rel="stylesheet">
-    <title>Admin Pannel</title>
+    <title><?= $title . ' | '?>Admin Pannel</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +77,7 @@ $userData = UserLogin::loginUserData("$name");
             <i class="fa fa-bars"></i>
         </div>
         <!--logo start-->
-        <a href="index.php" class="logo">Flat<span>lab</span></a>
+        <a href="index.php" class="logo">AR<span> Shahin</span></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->

@@ -24,6 +24,8 @@ class UserLogin
         session_start();
         $username = $data['username'];
         $pass = $data['password'];
+        $keep = '';
+        $keep = isset($data['keep']) ? $data['keep'] : '';
         $sql = "SELECT * FROM `users` WHERE `username`='$username' AND `password` = '$pass'";
         $result = mysqli_query(Database::db(),$sql);
         if($result){

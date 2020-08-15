@@ -28,7 +28,8 @@ class Session
     public static function set($key,$value){
         $_SESSION[$key] = $value;
     }
-    public static function bal(){
-        echo 'bal sess';
+    public function setCookie($key,$value,$time = 3600){
+        setcookie($key,$value,time() + $time);
     }
+
 }

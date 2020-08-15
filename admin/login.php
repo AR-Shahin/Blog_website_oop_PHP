@@ -47,7 +47,7 @@ if(isset($_SESSION['login-success'])){
             <input type="text" class="form-control" placeholder="User name" autofocus name="username">
             <input type="password" class="form-control" placeholder="Password" name="password">
             <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox"  name="keep"> Remember me
                 <span class="pull-right">
                     <a data-toggle="modal" href="#myModal"> Forgot Password?</a>
                 </span>
