@@ -44,11 +44,10 @@ class Mail
                 Session::set('succesMail',"Mail sent successfully");
                 $to = "mdshahinmije96@gmail.com";
                 $subject = "$sub";
-                $txt = "$msg!";
+                $txt = "$msg";
                 $headers = "From: $email" . "\r\n" .
                     "CC: $email";
-
-               # mail($to,$subject,$txt,$headers);
+                mail($to,$subject,$txt,$headers);
                 return;
             }else{
                 Session::set('failMail',"Mail not sent");

@@ -13,8 +13,16 @@
     <div class="col-md-6">
         <form action="update.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
+                <label for="">Site Title : </label>
+                <input type="text" class="form-control" name="title" value="<?=$siteData['title'] ?>">
+            </div>
+            <div class="form-group">
                 <label for="">Footer text : </label>
                 <input type="text" class="form-control" name="footer-txt" value="<?=$siteData['footer'] ?>">
+            </div>
+            <div class="form-group">
+                <label for="">Post Display : </label>
+                <input type="text" class="form-control" name="post" value="<?=$siteData['postdisplay'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Logo : </label>

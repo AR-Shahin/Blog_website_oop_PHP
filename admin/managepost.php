@@ -34,7 +34,7 @@
                         while ($row = mysqli_fetch_assoc($data)){ ?>
                             <tr>
                                 <td scope="row"><?= ++$i?></td>
-                                <td><?= $row['title']?></td>
+                                <td><?= substr($row['title'],0,40)?></td>
                                 <td><?= $row['category_name']?></td>
                                 <td><img style="width: 50px" src="../uploads/<?= $row['image']?>" alt=""></td>
                                 <td><?= $row['admin']?></td>

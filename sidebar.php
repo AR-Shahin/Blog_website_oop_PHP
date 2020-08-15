@@ -33,35 +33,39 @@
                 </div>
             </div><!-- end blog-list -->
         </div><!-- end widget -->
-
+        <?php
+        use App\classes\Site;
+        $ob = Site::displaySocialLink();
+        $data = mysqli_fetch_assoc($ob);
+        ?>
         <div class="widget">
             <h2 class="widget-title">Follow Us</h2>
 
             <div class="row text-center">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <a href="#" class="social-button facebook-button">
+                    <a href="<?= $data['facebook']?>" class="social-button facebook-button">
                         <i class="fa fa-facebook"></i>
                         <p>27k</p>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <a href="#" class="social-button twitter-button">
+                    <a href="<?= $data['twitter']?>" class="social-button twitter-button">
                         <i class="fa fa-twitter"></i>
                         <p>98k</p>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <a href="#" class="social-button google-button">
-                        <i class="fa fa-google-plus"></i>
+                    <a href="<?= $data['github']?>" class="social-button google-button">
+                        <i class="fa fa-github"></i>
                         <p>17k</p>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <a href="#" class="social-button youtube-button">
-                        <i class="fa fa-youtube"></i>
+                    <a href="<?= $data['linkedin']?>" class="social-button google-button">
+                        <i class="fa fa-linkedin"></i>
                         <p>22k</p>
                     </a>
                 </div>

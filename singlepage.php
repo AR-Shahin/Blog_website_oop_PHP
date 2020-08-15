@@ -13,6 +13,11 @@ if(isset($_GET['id'])){
     $postData = mysqli_fetch_assoc($postOb);
 }
 ?>
+<style>
+    section.section {
+        padding-bottom: 0px;
+    }
+</style>
 <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
     <div class="page-wrapper">
         <div class="blog-title-area text-center">
@@ -33,8 +38,8 @@ if(isset($_GET['id'])){
 
         </div><!-- end title -->
 
-        <div class="single-post-media">
-            <img src="uploads/<?= $postData['image'] ?>" alt="" class="img-fluid">
+        <div class="single-post-media text-center">
+            <img src="uploads/<?= $postData['image'] ?>" alt="" class=" w-75">
         </div><!-- end media -->
 
         <div class="blog-content">

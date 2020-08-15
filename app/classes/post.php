@@ -240,4 +240,12 @@ class Post
             return false;
         }
     }
+    public function pagination($sql){
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            return $result;
+        }else{
+            return false;
+        }
+    }
 }

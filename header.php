@@ -4,7 +4,7 @@ use App\classes\Post;
 use App\classes\Site;
 $ob = Site::display();
 $siteData = mysqli_fetch_assoc($ob);
-$post = Post::showActivelPost();
+#$post = Post::showActivelPost();
 $populer = Post::showPopulerlPost();
 ?>
 
@@ -19,7 +19,7 @@ $populer = Post::showPopulerlPost();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Site Metas -->
-    <title>Tech Blog - Stylish Magazine Blog Template</title>
+    <title><?= $siteData['title']?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">

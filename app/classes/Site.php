@@ -18,9 +18,11 @@ class Site
     }
     public function updateSite($data){
         $footer = $data['footer-txt'];
+        $title  = $data['title'];
+        $post = $data['post'];
 
         if($_FILES['logo']['name'] == NULL){
-            $sql = "UPDATE `site` SET `footer`='$footer' WHERE `id` = 1";
+            $sql = "UPDATE `site` SET `footer`='$footer',`title`='$title',`postdisplay`='$post' WHERE `id` = 1";
             $res = mysqli_query(Database::db(),$sql);
             if($res){
                 Session::set('updatesite',"Update Successfully!");
@@ -35,7 +37,7 @@ class Site
                 Session::set('extNotmatch',"Logo should be png format !");
                 return;
             }else{
-                $sql = "UPDATE `site` SET `logo`= '$image',`footer`='$footer' WHERE `id` = 1";
+                $sql = "UPDATE `site` SET `logo`= '$image',`footer`='$footer',`title`='$title',`postdisplay`='$post' WHERE `id` = 1";
                 $res = mysqli_query(Database::db(),$sql);
                 if($res){
                     $upload = '../uploads/' . $image;
