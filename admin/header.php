@@ -174,58 +174,23 @@ else{
                     <ul class="dropdown-menu extended inbox">
                         <div class="notify-arrow notify-arrow-red"></div>
                         <li>
-                            <p class="red">You have 5 new messages</p>
+                            <p class="red">You have <?= Mail::countNewMail() ?> new messages</p>
                         </li>
+                        <?php
+                       $mail =  Mail::displayNewMail();
+                       while ($m = mysqli_fetch_assoc($mail)){
+                        ?>
                         <li>
-                            <a href="#">
+                            <a href="">
                                 <span class="photo"><img alt="avatar" src="img/avatar-mini.jpg"></span>
                                 <span class="subject">
-                                    <span class="from"></span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                                <span class="message">
-                                        Hello, this is an example msg.
-                                    </span>
+                                    <?= $m['subject']?>
+                                </span>
                             </a>
                         </li>
+                        <?php } ?>
                         <li>
-                            <a href="#">
-                                <span class="photo"><img alt="avatar" src="img/avatar-mini2.jpg"></span>
-                                <span class="subject">
-                                    <span class="from">Jhon Doe</span>
-                                    <span class="time">10 mins</span>
-                                    </span>
-                                <span class="message">
-                                     Hi, Jhon Doe Bhai how are you ?
-                                    </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="photo"><img alt="avatar" src="img/avatar-mini3.jpg"></span>
-                                <span class="subject">
-                                    <span class="from">Jason Stathum</span>
-                                    <span class="time">3 hrs</span>
-                                    </span>
-                                <span class="message">
-                                        This is awesome dashboard.
-                                    </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="photo"><img alt="avatar" src="img/avatar-mini4.jpg"></span>
-                                <span class="subject">
-                                    <span class="from">Jondi Rose</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                                <span class="message">
-                                        Hello, this is metrolab
-                                    </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">See all messages</a>
+                            <a href="inbox.php">See all messages</a>
                         </li>
                     </ul>
                 </li>

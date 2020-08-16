@@ -47,7 +47,7 @@ class Mail
                 $txt = "$msg";
                 $headers = "From: $email" . "\r\n" .
                     "CC: $email";
-                mail($to,$subject,$txt,$headers);
+               # mail($to,$subject,$txt,$headers);
                 return;
             }else{
                 Session::set('failMail',"Mail not sent");
@@ -166,6 +166,15 @@ class Mail
         }else{
             Session::set('replynotsent',"Reply not sent ");
             return ;
+        }
+    }
+    public function displayNewMail(){
+        $sql = "SELECT * FROM `mails` WHERE status = 1 ORDER BY id DESC";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            return $result;
+        }else{
+            return false;
         }
     }
 }
