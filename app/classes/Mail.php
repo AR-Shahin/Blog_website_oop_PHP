@@ -47,7 +47,7 @@ class Mail
                 $txt = "$msg";
                 $headers = "From: $email" . "\r\n" .
                     "CC: $email";
-               # mail($to,$subject,$txt,$headers);
+               mail($to,$subject,$txt,$headers);
                 return;
             }else{
                 Session::set('failMail',"Mail not sent");
