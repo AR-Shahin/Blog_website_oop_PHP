@@ -7,7 +7,7 @@ use App\classes\Session;
 
 class Category
 {
-    public function addCategory($data){
+    public static function addCategory($data){
         $catName = $data['category_name'];
         $status = $data['status'];
         $admin =  $_SESSION['username'];
@@ -21,7 +21,7 @@ class Category
             return $txt;
         }
     }
-    public function showAllCategory(){
+    public static function showAllCategory(){
         $sql = "SELECT * FROM `categories` ORDER BY id DESC ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -30,7 +30,7 @@ class Category
             return false;
         }
     }
-    public function showLimitCategory(){
+    public static function showLimitCategory(){
         $sql = "SELECT * FROM `categories` ORDER BY id DESC LIMIT 1,5";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -39,7 +39,7 @@ class Category
             return false;
         }
     }
-    public function countCategoryPost($id){
+    public static function countCategoryPost($id){
         $sql = "SELECT * FROM blog WHERE cat_id = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -49,7 +49,7 @@ class Category
             return false;
         }
     }
-    public function countCategory(){
+    public static  function countCategory(){
         $sql = "SELECT * FROM `categories` ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -59,7 +59,7 @@ class Category
             return false;
         }
     }
-    public function inactiveCategory($id){
+    public  static  function inactiveCategory($id){
         $sql = "UPDATE `categories` SET `status` = '0' WHERE `categories`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -68,7 +68,7 @@ class Category
             return false;
         }
     }
-    public function activeCategory($id){
+    public static   function activeCategory($id){
         $sql = "UPDATE `categories` SET `status` = '1' WHERE `categories`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -78,7 +78,7 @@ class Category
         }
     }
 
-    public function updateCategory($data){
+    public static   function updateCategory($data){
         $id = $data['id'];
         $catName = $data['catName'];
         $admin = Session::get('username');
@@ -93,7 +93,7 @@ class Category
         }
     }
 
-    public function deleteCategory($id){
+    public static   function deleteCategory($id){
         $sql = "DELETE FROM `categories` WHERE `id` = $id";
         $res = mysqli_query(Database::db(),$sql);
         if($res){
@@ -104,7 +104,7 @@ class Category
             return $dltTxt;
         }
     }
-    public function activeCategories(){
+    public  static  function activeCategories(){
         $sql = "SELECT * FROM `categories` WHERE `status` = 1 ORDER BY id DESC";
         $res = mysqli_query(Database::db(),$sql);
         if($res){

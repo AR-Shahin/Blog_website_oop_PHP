@@ -9,7 +9,7 @@ use App\classes\Helper;
 
 class Post
 {
-    public function addPost($data){
+    public  function addPost($data){
         $cat_id = $data['cat_id'];
         $title = $data['title'];
         $title = Helper::filter("$title");
@@ -38,7 +38,7 @@ class Post
             return $txt;
         }
     }
-    public function imageChecker($ext){
+    public  static  function imageChecker($ext){
         if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'png' || $ext == 'PNG' || $ext == 'JPG' || $ext == 'JPEG'){
             return true;
         }else{
@@ -46,7 +46,7 @@ class Post
         }
     }
 
-    public function showAllPost(){
+    public  static  function showAllPost(){
         $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id ORDER BY id DESC  ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -56,7 +56,7 @@ class Post
         }
     }
     //ALL ACTIVE POST
-    public function showActivelPost(){
+    public  static  function showActivelPost(){
         $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.status = 1 ORDER BY id DESC  ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -65,7 +65,7 @@ class Post
             return false;
         }
     }
-    public function showPopulerlPost(){
+    public  static  function showPopulerlPost(){
         $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.rate = 1 ORDER BY id DESC ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -75,7 +75,7 @@ class Post
         }
     }
 
-    public function inactivePost($id){
+    public  static   function inactivePost($id){
         $sql = "UPDATE `blog` SET `status` = '0' WHERE `blog`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -84,7 +84,7 @@ class Post
             return false;
         }
     }
-    public function inactiveRate($id){
+    public static   function inactiveRate($id){
         $sql = "UPDATE `blog` SET `rate` = '0' WHERE `blog`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -93,7 +93,7 @@ class Post
             return false;
         }
     }
-    public function activePost($id){
+    public  static  function activePost($id){
         $sql = "UPDATE `blog` SET `status` = '1' WHERE `blog`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -102,7 +102,7 @@ class Post
             return false;
         }
     }
-    public function activeRate($id){
+    public  static  function activeRate($id){
         $sql = "UPDATE `blog` SET `rate` = '1' WHERE `blog`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -111,7 +111,7 @@ class Post
             return false;
         }
     }
-    public function deletePost($id){
+    public static   function deletePost($id){
         $sql = "DELETE FROM `blog` WHERE `id` = $id";
         $imgName =  self::findSingleImage($id);
         $path = '../uploads/'.$imgName;
@@ -126,7 +126,7 @@ class Post
         }
     }
     //SINGLE POST
-    public function singlePost($id){
+    public static   function singlePost($id){
         # $sql = "SELECT * FROM `blog` WHERE `id` = $id";
         $sql = "SELECT blog.*,categories.category_name  FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.id = $id ";
         $result = mysqli_query(Database::db(),$sql);
@@ -141,7 +141,7 @@ class Post
     }
 
 
-    public function findSingleImage($id){
+    public static   function findSingleImage($id){
         $sql = "SELECT `image` FROM `blog` WHERE `id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -192,7 +192,7 @@ class Post
         }
     }
     //COUNT POST
-    public function countPost(){
+    public  static  function countPost(){
         $sql = "SELECT * FROM `blog` ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -203,7 +203,7 @@ class Post
         }
     }
     //COUNT ACTIVE POST
-    public function countActivePost(){
+    public  static  function countActivePost(){
         $sql = "SELECT * FROM `blog` WHERE status = 1";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -213,7 +213,7 @@ class Post
             return false;
         }
     }
-    public function categoryWisePost($id){
+    public  static  function categoryWisePost($id){
         $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.status = 1 AND blog.cat_id = $id ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -227,7 +227,7 @@ class Post
         }
     }
 
-    public function searchPost($data){
+    public  static  function searchPost($data){
         $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.content LIKE '%$data%' AND blog.status = 1 ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -240,7 +240,7 @@ class Post
             return false;
         }
     }
-    public function pagination($sql){
+    public  static  function pagination($sql){
         $result = mysqli_query(Database::db(),$sql);
         if($result){
             return $result;

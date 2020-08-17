@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2f680f-dd33-4e7c-bc6a-ee7d936485ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/classes/Mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Site.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/UserLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/UserLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +65,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/classes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Portfolio_Second_Version" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -117,6 +125,9 @@
       <workItem from="1597497120504" duration="6238000" />
       <workItem from="1597512436931" duration="24000" />
       <workItem from="1597548012227" duration="24000" />
+      <workItem from="1597559287261" duration="189000" />
+      <workItem from="1597559535321" duration="988000" />
+      <workItem from="1597583666226" duration="183000" />
     </task>
     <servers />
   </component>
@@ -152,6 +163,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1597503318876" />
+    <state x="410" y="66" key="FileChooserDialogImpl" timestamp="1597583847754">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="410" y="66" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1597583847754" />
     <state x="414" y="82" key="NewPhpClassDialog" timestamp="1597385957814">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -162,6 +177,10 @@
     </state>
     <state x="504" y="288" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1597383922160" />
     <state x="567" y="325" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1596635029514" />
+    <state x="406" y="3" key="RollbackChangesDialog" timestamp="1597583690461">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="406" y="3" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1597583690461" />
     <state width="623" height="498" key="SwitcherDM" timestamp="1596904629832">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

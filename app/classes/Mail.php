@@ -8,7 +8,7 @@ use App\classes\Session;
 
 class Mail
 {
-    public function sendMail($data){
+    public  static  function sendMail($data){
         if(empty($data['name'])){
             Session::set('emptyName',"Name must use");
             return;
@@ -56,7 +56,7 @@ class Mail
         }
     }
 
-    public function showAllMail(){
+    public static   function showAllMail(){
         $sql = "SELECT * FROM `mails` WHERE status !=0 ORDER BY id DESC";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -65,7 +65,7 @@ class Mail
             return false;
         }
     }
-    public function showTrashMail(){
+    public  static  function showTrashMail(){
         $sql = "SELECT * FROM `mails` WHERE status = 0 ORDER BY id DESC";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -76,7 +76,7 @@ class Mail
     }
 
     //COUNT ALL MAIL
-    public function countAllMail(){
+    public  static  function countAllMail(){
         $sql = "SELECT * FROM `mails` ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -87,7 +87,7 @@ class Mail
         }
     }
     //COUNT ALL new mail
-    public function countNewMail(){
+    public static   function countNewMail(){
         $sql = "SELECT * FROM `mails` WHERE status = 1";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -98,7 +98,7 @@ class Mail
         }
     }
     //COUNT TRASH MAIL
-    public function countAllTrashMail(){
+    public static   function countAllTrashMail(){
         $sql = "SELECT * FROM `mails` WHERE status = 0 ";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -109,7 +109,7 @@ class Mail
         }
     }
 //SEEN MSG
-    public function seenMail($id){
+    public  static  function seenMail($id){
         $sql = "UPDATE `mails` SET `status` = '2' WHERE `mails`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -119,7 +119,7 @@ class Mail
         }
     }
     //SEEN MSG
-    public function makeTrashMail($id){
+    public static   function makeTrashMail($id){
         $sql = "UPDATE `mails` SET `status` = '0' WHERE `mails`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -129,7 +129,7 @@ class Mail
         }
     }
     //DELETE MAIL
-    public function deleteMail($id){
+    public  static  function deleteMail($id){
         $sql = "DELETE FROM `mails` WHERE `id` = $id";
         $res = mysqli_query(Database::db(),$sql);
         if($res){
@@ -139,7 +139,7 @@ class Mail
         }
     }
     //SINGLE MAIL
-    public function singleMail($id){
+    public  static  function singleMail($id){
         # $sql = "SELECT * FROM `blog` WHERE `id` = $id";
         $sql = "SELECT * FROM `mails` WHERE `id` = $id ";
         $result = mysqli_query(Database::db(),$sql);
@@ -152,7 +152,7 @@ class Mail
             return false;
         }
     }
-    public function saveReply($data){
+    public static   function saveReply($data){
         $id = $data['id'];
         $user = $_SESSION['username'];
         $rep = $data['reply'];
@@ -168,7 +168,7 @@ class Mail
             return ;
         }
     }
-    public function displayNewMail(){
+    public static   function displayNewMail(){
         $sql = "SELECT * FROM `mails` WHERE status = 1 ORDER BY id DESC";
         $result = mysqli_query(Database::db(),$sql);
         if($result){

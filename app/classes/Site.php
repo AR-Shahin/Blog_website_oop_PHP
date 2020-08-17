@@ -7,7 +7,7 @@ use App\classes\Session;
 
 class Site
 {
-    public function display(){
+    public  static  function display(){
         $sql = "SELECT * FROM `site`";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -50,14 +50,14 @@ class Site
 
 
     }
-    public function imageChecker($ext){
+    public  static  function imageChecker($ext){
         if($ext == 'png' || $ext == 'PNG'){
             return true;
         }else{
             return false;
         }
     }
-    public function displaySocialLink(){
+    public  static  function displaySocialLink(){
         $sql = "SELECT * FROM `social_links`";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -66,7 +66,7 @@ class Site
             return false;
         }
     }
-    public function updateSocialLink($data){
+    public  static  function updateSocialLink($data){
         $fb = $data['fb'];
         $tw = $data['tw'];
         $lin = $data['lin'];

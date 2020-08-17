@@ -7,7 +7,7 @@ namespace App\classes;
 class Helper
 {
     //FILTER DATA
-    public static function filter($data){
+    public  static function filter($data){
         $data = trim($data);
         $data = stripslashes($data);
         #$data = htmlspecialchars($data);
@@ -16,7 +16,7 @@ class Helper
         $data = filter_var($data, $filter, $flags);
         return $data;
     }
-    public function title(){
+    public static   function title(){
         $path = $_SERVER['SCRIPT_FILENAME'];
         $title = basename($path, '.php');
         //$title = str_replace('_', ' ', $title);
@@ -27,7 +27,7 @@ class Helper
         }
         return $title = ucfirst($title);
     }
-    public function textShort($text,$limit = 400){
+    public  static  function textShort($text,$limit = 400){
         $text = $text . " ";
         $text = substr($text,0,$limit);
        # $text = substr($text,0,strpos($text, ' '));

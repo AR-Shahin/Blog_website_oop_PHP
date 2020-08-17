@@ -8,7 +8,7 @@ use App\classes\Database;
 use App\classes\Session;
 class UserLogin
 {
-    public function roleCheck($username,$pass){
+    public static   function roleCheck($username,$pass){
         $username = $data['username'];
         $pass = $data['password'];
         $sql = "SELECT * FROM `users` WHERE `username`='$username' AND `password` = '$pass' AND `role` == 0";
@@ -19,7 +19,7 @@ class UserLogin
             return false;
         }
     }
-    public function userCheck($data)
+    public  static  function userCheck($data)
     {
         session_start();
         $username = $data['username'];
@@ -50,7 +50,7 @@ class UserLogin
             echo 'SQL problem : )';
         }
     }
-    public function countActiveUser(){
+    public static   function countActiveUser(){
         $sql = "SELECT * FROM `users` WHERE role != 0";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -60,7 +60,7 @@ class UserLogin
             return false;
         }
     }
-    public function loginUserData($username){
+    public  static  function loginUserData($username){
         $sql = " SELECT * FROM `users` WHERE `username` = '$username' ";
         $res = mysqli_query(Database::db(),$sql);
         if($res){
@@ -70,7 +70,7 @@ class UserLogin
             return false;
         }
     }
-    public function doubleUser($usr){
+    public  static  function doubleUser($usr){
         $sql = "SELECT * FROM `users` WHERE `username` = '$usr'";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -85,7 +85,7 @@ class UserLogin
         }
 
     }
-    public function doubleEmail($email){
+    public  static  function doubleEmail($email){
         $sql = "SELECT * FROM `users` WHERE `email` = '$email'";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -100,7 +100,7 @@ class UserLogin
         }
 
     }
-    public function passwordCheck($pass,$conpass){
+    public  static  function passwordCheck($pass,$conpass){
         if($pass === $conpass){
             return true;
         }else{
@@ -176,7 +176,7 @@ class UserLogin
         }
 
     }
-    public function allUser(){
+    public  static  function allUser(){
         $sql = "SELECT * FROM `users` ORDER BY id DESC";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -187,7 +187,7 @@ class UserLogin
     }
 
     //Unblock
-    public function userUnblock($id){
+    public static   function userUnblock($id){
         $sql = "UPDATE `users` SET `role` = '2' WHERE `users`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -197,7 +197,7 @@ class UserLogin
         }
     }
     //Unblock
-    public function userBlock($id){
+    public static   function userBlock($id){
         $sql = "UPDATE `users` SET `role` = '0' WHERE `users`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -207,7 +207,7 @@ class UserLogin
         }
     }
     //Unblock
-    public function makeAdmin($id){
+    public  static  function makeAdmin($id){
         $sql = "UPDATE `users` SET `role` = '1' WHERE `users`.`id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
@@ -216,7 +216,7 @@ class UserLogin
             return false;
         }
     }
-    public function deleteUser($id){
+    public static   function deleteUser($id){
         $sql = "DELETE FROM `users` WHERE `id` = $id";
         $res = mysqli_query(Database::db(),$sql);
         if($res){
@@ -227,14 +227,14 @@ class UserLogin
             return $dltTxt;
         }
     }
-    public function imageChecker($ext){
+    public  static  function imageChecker($ext){
         if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'png' || $ext == 'PNG' || $ext == 'JPG' || $ext == 'JPEG'){
             return true;
         }else{
             return false;
         }
     }
-    public function findSingleImage($id){
+    public  static  function findSingleImage($id){
         $sql = "SELECT `image` FROM `users` WHERE `id` = $id";
         $result = mysqli_query(Database::db(),$sql);
         if($result){
