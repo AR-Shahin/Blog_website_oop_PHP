@@ -248,4 +248,19 @@ class Post
             return false;
         }
     }
+    public static function relatedPost(){
+        $rand1 = rand(1,5);
+        $rand2 = rand(1,3);
+        $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id WHERE blog.status = 1 LIMIT $rand1,$rand2 ";
+        $result = mysqli_query(Database::db(),$sql);
+        if($result){
+            $row = mysqli_num_rows($result);
+            if($row>0){
+                return $result;
+            }
+            return false;
+        }else{
+            return false;
+        }
+    }
 }

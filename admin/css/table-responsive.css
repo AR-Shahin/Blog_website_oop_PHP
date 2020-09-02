@@ -65,7 +65,7 @@
     #no-more-tables tr { border: 1px solid #ccc; }
 
     #no-more-tables td {
-        /* Behave like a "row" */
+        /* Behave like a "rp" */
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;

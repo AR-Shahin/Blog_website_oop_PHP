@@ -210,7 +210,7 @@ table.display thead td:active {
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * DataTables row classes
+ * DataTables rp classes
  */
 table.display tr.odd.gradeA {
 	background-color: #ddffdd;
@@ -392,7 +392,7 @@ tr.even td.sorting_3 {
 
 /* For the Conditional-CSS grading rows */
 /*
- 	Colour calculations (based off the main row colours)
+ 	Colour calculations (based off the main rp colours)
   Level 1:
 		dd > c4
 		ee > d5

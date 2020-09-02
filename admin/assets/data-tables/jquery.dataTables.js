@@ -468,7 +468,7 @@
 				aDataSupplied.slice() :
 				$.extend( true, {}, aDataSupplied );
 			
-			/* Create the object for storing information about this new row */
+			/* Create the object for storing information about this new rp */
 			var iRow = oSettings.aoData.length;
 			var oData = $.extend( true, {}, DataTable.models.oRow );
 			oData._aData = aDataIn;
@@ -537,7 +537,7 @@
 				oCol, oData;
 			
 			/*
-			 * Process by row first
+			 * Process by rp first
 			 * Add the data object for the whole table - storing the tr node. Note - no point in getting
 			 * DOM based data if we are going to go and replace it with Ajax source data.
 			 */
@@ -718,7 +718,7 @@
 		/**
 		 * Take a TD element and convert it into a column data index (not the visible index)
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {int} iRow The row number the TD/TH can be found in
+		 *  @param {int} iRow The rp number the TD/TH can be found in
 		 *  @param {node} n The TD/TH element to find
 		 *  @returns {int} index if the node is found, -1 if not
 		 *  @memberof DataTable#oApi
@@ -739,9 +739,9 @@
 		
 		
 		/**
-		 * Get an array of data for a given row from the internal data cache
+		 * Get an array of data for a given rp from the internal data cache
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {int} iRow aoData row id
+		 *  @param {int} iRow aoData rp id
 		 *  @param {string} sSpecific data get type ('type' 'filter' 'sort')
 		 *  @param {array} aiColumns Array of column indexes to get data from
 		 *  @returns {array} Data array
@@ -761,7 +761,7 @@
 		/**
 		 * Get the data for a given cell from the internal cache, taking into account data mapping
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {int} iRow aoData row id
+		 *  @param {int} iRow aoData rp id
 		 *  @param {int} iCol Column index
 		 *  @param {string} sSpecific data get type ('display', 'type' 'filter' 'sort')
 		 *  @returns {*} Cell data
@@ -779,7 +779,7 @@
 				{
 					_fnLog( oSettings, 0, "Requested unknown parameter "+
 						(typeof oCol.mData=='function' ? '{mData function}' : "'"+oCol.mData+"'")+
-						" from the data source for row "+iRow );
+						" from the data source for rp "+iRow );
 					oSettings.iDrawError = oSettings.iDraw;
 				}
 				return oCol.sDefaultContent;
@@ -807,7 +807,7 @@
 		/**
 		 * Set the value for a specific cell, into the internal data cache
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {int} iRow aoData row id
+		 *  @param {int} iRow aoData rp id
 		 *  @param {int} iCol Column index
 		 *  @param {*} val Value to set
 		 *  @memberof DataTable#oApi
@@ -1064,10 +1064,10 @@
 		
 		
 		 /**
-		 * Call the developer defined fnRender function for a given cell (row/column) with
+		 * Call the developer defined fnRender function for a given cell (rp/column) with
 		 * the required parameters and return the result.
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {int} iRow aoData index for the row
+		 *  @param {int} iRow aoData index for the rp
 		 *  @param {int} iCol aoColumns index for the column
 		 *  @returns {*} Return of the developer's fnRender function
 		 *  @memberof DataTable#oApi
@@ -1085,7 +1085,7 @@
 			}, _fnGetCellData(oSettings, iRow, iCol, 'display') );
 		}
 		/**
-		 * Create a new TR element (and it's TD children) for a row
+		 * Create a new TR element (and it's TD children) for a rp
 		 *  @param {object} oSettings dataTables settings object
 		 *  @param {int} iRow Row to consider
 		 *  @memberof DataTable#oApi
@@ -1104,7 +1104,7 @@
 				 */
 				oData.nTr._DT_RowIndex = iRow;
 		
-				/* Special parameters can be given by the data source to be used on the row */
+				/* Special parameters can be given by the data source to be used on the rp */
 				if ( oData._aData.DT_RowId )
 				{
 					oData.nTr.id = oData._aData.DT_RowId;
@@ -1319,7 +1319,7 @@
 					}
 				}
 		
-				/* Prep the applied array - it needs an element for each row */
+				/* Prep the applied array - it needs an element for each rp */
 				aApplied.push( [] );
 			}
 		
@@ -1327,7 +1327,7 @@
 			{
 				nLocalTr = aoLocal[i].nTr;
 				
-				/* All cells are going to be replaced, so empty out the row */
+				/* All cells are going to be replaced, so empty out the rp */
 				if ( nLocalTr )
 				{
 					while( (n = nLocalTr.firstChild) )
@@ -1341,7 +1341,7 @@
 					iRowspan = 1;
 					iColspan = 1;
 		
-					/* Check to see if there is already a cell (row/colspan) covering our target
+					/* Check to see if there is already a cell (rp/colspan) covering our target
 					 * insert point. If there is, then there is nothing to do.
 					 */
 					if ( aApplied[i][j] === undefined )
@@ -1464,14 +1464,14 @@
 						}
 					}
 					
-					/* Row callback functions - might want to manipulate the row */
+					/* Row callback functions - might want to manipulate the rp */
 					_fnCallbackFire( oSettings, 'aoRowCallback', null, 
 						[nRow, oSettings.aoData[ oSettings.aiDisplay[j] ]._aData, iRowCount, j] );
 					
 					anRows.push( nRow );
 					iRowCount++;
 					
-					/* If there is an open row - and it is attached to this parent - attach it on redraw */
+					/* If there is an open rp - and it is attached to this parent - attach it on redraw */
 					if ( iOpenRows !== 0 )
 					{
 						for ( var k=0 ; k<iOpenRows ; k++ )
@@ -1487,7 +1487,7 @@
 			}
 			else
 			{
-				/* Table is empty - create a row with an empty message in it */
+				/* Table is empty - create a rp with an empty message in it */
 				anRows[ 0 ] = document.createElement( 'tr' );
 				
 				if ( oSettings.asStripeClasses[0] )
@@ -1523,7 +1523,7 @@
 				_fnGetDataMaster( oSettings ), oSettings._iDisplayStart, oSettings.fnDisplayEnd(), oSettings.aiDisplay ] );
 			
 			/* 
-			 * Need to remove any old row from the display - note we can't just empty the tbody using
+			 * Need to remove any old rp from the display - note we can't just empty the tbody using
 			 * $().html('') since this will unbind the jQuery event handlers (even although the node 
 			 * still exists!) - equally we can't use innerHTML, since IE throws an exception.
 			 */
@@ -1768,7 +1768,7 @@
 		 * Use the DOM source to create up an array of header cells. The idea here is to
 		 * create a layout grid (array) of rows x columns, which contains a reference
 		 * to the cell that that point in the grid (regardless of col/rowspan), such that
-		 * any column / row could be removed and the new grid constructed
+		 * any column / rp could be removed and the new grid constructed
 		 *  @param array {object} aLayout Array to store the calculated layout in
 		 *  @param {node} nThead The header/footer element for the table
 		 *  @memberof DataTable#oApi
@@ -1801,7 +1801,7 @@
 				nTr = nTrs[i];
 				iColumn = 0;
 				
-				/* For every cell in the row... */
+				/* For every cell in the rp... */
 				nCell = nTr.firstChild;
 				while ( nCell ) {
 					if ( nCell.nodeName.toUpperCase() == "TD" ||
@@ -1813,7 +1813,7 @@
 						iColspan = (!iColspan || iColspan===0 || iColspan===1) ? 1 : iColspan;
 						iRowspan = (!iRowspan || iRowspan===0 || iRowspan===1) ? 1 : iRowspan;
 		
-						/* There might be colspan cells already in this row, so shift our target 
+						/* There might be colspan cells already in this rp, so shift our target
 						 * accordingly
 						 */
 						iColShifted = fnShiftCol( aLayout, i, iColumn );
@@ -2210,7 +2210,7 @@
 						iDisIndex
 					);
 					
-					/* Check if we should use this row based on the filtering function */
+					/* Check if we should use this rp based on the filtering function */
 					if ( !bTest )
 					{
 						oSettings.aiDisplay.splice( j-iCorrector, 1 );
@@ -2369,7 +2369,7 @@
 		
 		
 		/**
-		 * Create a searchable string from a single data row
+		 * Create a searchable string from a single data rp
 		 *  @param {object} oSettings dataTables settings object
 		 *  @param {array} aData Row data array to use for the data to search
 		 *  @memberof DataTable#oApi
@@ -3608,7 +3608,7 @@
 			else
 			{
 				/* Otherwise we are going to have to do some calculations to get the width of each column.
-				 * Construct a 1 row table with the widest node in the data, and any user defined widths,
+				 * Construct a 1 rp table with the widest node in the data, and any user defined widths,
 				 * then insert it into the DOM and allow the browser to do all the hard work of
 				 * calculating table widths.
 				 */
@@ -3976,7 +3976,7 @@
 					}
 				}
 				
-				/* Create a value - key array of the current row positions such that we can use their
+				/* Create a value - key array of the current rp positions such that we can use their
 				 * current position during the sort, if values match, in order to perform stable sorting
 				 */
 				for ( i=0, iLen=oSettings.aiDisplayMaster.length ; i<iLen ; i++ )
@@ -4022,7 +4022,7 @@
 				 *  	return oSort['numeric-asc']( aiOrig[a], aiOrig[b] );
 				 *  }
 				 * Basically we have a test for each sorting column, if the data in that column is equal,
-				 * test the next column. If all columns match, then we use a numeric sort on the row 
+				 * test the next column. If all columns match, then we use a numeric sort on the rp
 				 * positions in the original data array to provide a stable sort.
 				 */
 				oSettings.aiDisplayMaster.sort( function ( a, b ) {
@@ -4318,7 +4318,7 @@
 			 * simpler using jQuery selectors and add/removeClass, but that is significantly slower
 			 * (on the order of 5 times slower) - hence the direct DOM manipulation here.
 			 * Note that for deferred drawing we do use jQuery - the reason being that taking the first
-			 * row found to see if the whole column needs processed can miss classes since the first
+			 * rp found to see if the whole column needs processed can miss classes since the first
 			 * column might be new.
 			 */
 			sClass = oClasses.sSortColumn;
@@ -4633,7 +4633,7 @@
 		
 		
 		/**
-		 * Return an flat array with all TD nodes for the table, or row
+		 * Return an flat array with all TD nodes for the table, or rp
 		 *  @param {object} oSettings dataTables settings object
 		 *  @param {int} [iIndividualRow] aoData index to get the nodes for - optional 
 		 *    if not given then the return array will contain all nodes for the table
@@ -4648,7 +4648,7 @@
 			var iRow, iRows=oSettings.aoData.length,
 				iColumn, iColumns, oData, sNodeName, iStart=0, iEnd=iRows;
 			
-			/* Allow the collection to be limited to just one row */
+			/* Allow the collection to be limited to just one rp */
 			if ( iIndividualRow !== undefined )
 			{
 				iStart = iIndividualRow;
@@ -4957,7 +4957,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable = $('#example').dataTable();
 		 *
-		 *      // Highlight every second row
+		 *      // Highlight every second rp
 		 *      oTable.$('tr:odd').css('backgroundColor', 'blue');
 		 *    } );
 		 *
@@ -5067,10 +5067,10 @@
 		
 		/**
 		 * Almost identical to $ in operation, but in this case returns the data for the matched
-		 * rows - as such, the jQuery selector used should match TR row nodes or TD/TH cell nodes
-		 * rather than any descendants, so the data can be obtained for the row/cell. If matching
+		 * rows - as such, the jQuery selector used should match TR rp nodes or TD/TH cell nodes
+		 * rather than any descendants, so the data can be obtained for the rp/cell. If matching
 		 * rows are found, the data returned is the original data array/object that was used to  
-		 * create the row (or a generated array if from a DOM source).
+		 * create the rp (or a generated array if from a DOM source).
 		 *
 		 * This method is often useful in-combination with $ where both functions are given the
 		 * same parameters and the array indexes will match identically.
@@ -5093,7 +5093,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable = $('#example').dataTable();
 		 *
-		 *      // Get the data from the first row in the table
+		 *      // Get the data from the first rp in the table
 		 *      var data = oTable._('tr:first');
 		 *
 		 *      // Do something useful with the data
@@ -5128,13 +5128,13 @@
 		
 		
 		/**
-		 * Add a single new row or multiple rows of data to the table. Please note
+		 * Add a single new rp or multiple rows of data to the table. Please note
 		 * that this is suitable for client-side processing only - if you are using 
 		 * server-side processing (i.e. "bServerSide": true), then to add data, you
 		 * must add it to the data source, i.e. the server-side, through an Ajax call.
 		 *  @param {array|object} mData The data to be added to the table. This can be:
 		 *    <ul>
-		 *      <li>1D array of data - add a single row with the data provided</li>
+		 *      <li>1D array of data - add a single rp with the data provided</li>
 		 *      <li>2D array of arrays - add multiple rows in a single call</li>
 		 *      <li>object - data object when using <i>mData</i></li>
 		 *      <li>array of objects - multiple data objects when using <i>mData</i></li>
@@ -5274,22 +5274,22 @@
 		
 		
 		/**
-		 * The exact opposite of 'opening' a row, this function will close any rows which 
+		 * The exact opposite of 'opening' a rp, this function will close any rows which
 		 * are currently 'open'.
-		 *  @param {node} nTr the table row to 'close'
-		 *  @returns {int} 0 on success, or 1 if failed (can't find the row)
+		 *  @param {node} nTr the table rp to 'close'
+		 *  @returns {int} 0 on success, or 1 if failed (can't find the rp)
 		 *  @dtopt API
 		 *
 		 *  @example
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *      
-		 *      // 'open' an information row when a row is clicked on
+		 *      // 'open' an information rp when a rp is clicked on
 		 *      $('#example tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
 		 *        } else {
-		 *          oTable.fnOpen( this, "Temporary row opened", "info_row" );
+		 *          oTable.fnOpen( this, "Temporary rp opened", "info_row" );
 		 *        }
 		 *      } );
 		 *      
@@ -5320,19 +5320,19 @@
 		
 		
 		/**
-		 * Remove a row for the table
-		 *  @param {mixed} mTarget The index of the row from aoData to be deleted, or
+		 * Remove a rp for the table
+		 *  @param {mixed} mTarget The index of the rp from aoData to be deleted, or
 		 *    the TR element you want to delete
 		 *  @param {function|null} [fnCallBack] Callback function
 		 *  @param {bool} [bRedraw=true] Redraw the table or not
-		 *  @returns {array} The row that was deleted
+		 *  @returns {array} The rp that was deleted
 		 *  @dtopt API
 		 *
 		 *  @example
 		 *    $(document).ready(function() {
 		 *      var oTable = $('#example').dataTable();
 		 *      
-		 *      // Immediately remove the first row
+		 *      // Immediately remove the first rp
 		 *      oTable.fnDeleteRow( 0 );
 		 *    } );
 		 */
@@ -5345,7 +5345,7 @@
 			iAODataIndex = (typeof mTarget === 'object') ? 
 				_fnNodeToDataIndex(oSettings, mTarget) : mTarget;
 			
-			/* Return the data array from this row */
+			/* Return the data array from this rp */
 			var oData = oSettings.aoData.splice( iAODataIndex, 1 );
 		
 			/* Update the _DT_RowIndex parameter */
@@ -5357,7 +5357,7 @@
 				}
 			}
 			
-			/* Remove the target row from the search array */
+			/* Remove the target rp from the search array */
 			var iDisplayIndex = $.inArray( iAODataIndex, oSettings.aiDisplay );
 			oSettings.asDataSearch.splice( iDisplayIndex, 1 );
 			
@@ -5434,7 +5434,7 @@
 			/* Blitz all DT events */
 			$(oSettings.nTableWrapper).find('*').andSelf().unbind('.DT');
 			
-			/* If there is an 'empty' indicator row, remove it */
+			/* If there is an 'empty' indicator rp, remove it */
 			$('tbody>tr>td.'+oSettings.oClasses.sRowEmpty, oSettings.nTable).parent().remove();
 			
 			/* When scrolling we had to break the table up - restore it */
@@ -5651,16 +5651,16 @@
 		
 		
 		/**
-		 * Get the data for the whole table, an individual row or an individual cell based on the 
+		 * Get the data for the whole table, an individual rp or an individual cell based on the
 		 * provided parameters.
-		 *  @param {int|node} [mRow] A TR row node, TD/TH cell node or an integer. If given as
-		 *    a TR node then the data source for the whole row will be returned. If given as a
+		 *  @param {int|node} [mRow] A TR rp node, TD/TH cell node or an integer. If given as
+		 *    a TR node then the data source for the whole rp will be returned. If given as a
 		 *    TD/TH cell node then iCol will be automatically calculated and the data for the
 		 *    cell returned. If given as an integer, then this is treated as the aoData internal
-		 *    data index for the row (see fnGetPosition) and the data for that row used.
+		 *    data index for the rp (see fnGetPosition) and the data for that rp used.
 		 *  @param {int} [iCol] Optional column index that you want the data of.
 		 *  @returns {array|object|string} If mRow is undefined, then the data for all rows is
-		 *    returned. If mRow is defined, just data for that row, and is iCol is
+		 *    returned. If mRow is defined, just data for that rp, and is iCol is
 		 *    defined, only data for the designated cell is returned.
 		 *  @dtopt API
 		 *
@@ -5671,7 +5671,7 @@
 		 *
 		 *      oTable.$('tr').click( function () {
 		 *        var data = oTable.fnGetData( this );
-		 *        // ... do something with the array / object of data for the row
+		 *        // ... do something with the array / object of data for the rp
 		 *      } );
 		 *    } );
 		 *
@@ -5722,7 +5722,7 @@
 		 * Get an array of the TR nodes that are used in the table's body. Note that you will 
 		 * typically want to use the '$' API method in preference to this as it is more 
 		 * flexible.
-		 *  @param {int} [iRow] Optional row index for the TR element you want
+		 *  @param {int} [iRow] Optional rp index for the TR element you want
 		 *  @returns {array|node} If iRow is undefined, returns an array of all TR elements
 		 *    in the table's body, or iRow is defined, just the TR element requested.
 		 *  @dtopt API
@@ -5752,7 +5752,7 @@
 		 * and column index including hidden columns
 		 *  @param {node} nNode this can either be a TR, TD or TH in the table's body
 		 *  @returns {int} If nNode is given as a TR, then a single index is returned, or
-		 *    if given as a cell, an array of [row index, column index (visible), 
+		 *    if given as a cell, an array of [rp index, column index (visible),
 		 *    column index (all)] is given.
 		 *  @dtopt API
 		 *
@@ -5762,7 +5762,7 @@
 		 *        // Get the position of the current data from the node
 		 *        var aPos = oTable.fnGetPosition( this );
 		 *        
-		 *        // Get the data array for this row
+		 *        // Get the data array for this rp
 		 *        var aData = oTable.fnGetData( aPos[0] );
 		 *        
 		 *        // Update the data array and return the value
@@ -5794,21 +5794,21 @@
 		
 		
 		/**
-		 * Check to see if a row is 'open' or not.
-		 *  @param {node} nTr the table row to check
-		 *  @returns {boolean} true if the row is currently open, false otherwise
+		 * Check to see if a rp is 'open' or not.
+		 *  @param {node} nTr the table rp to check
+		 *  @returns {boolean} true if the rp is currently open, false otherwise
 		 *  @dtopt API
 		 *
 		 *  @example
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *      
-		 *      // 'open' an information row when a row is clicked on
+		 *      // 'open' an information rp when a rp is clicked on
 		 *      $('#example tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
 		 *        } else {
-		 *          oTable.fnOpen( this, "Temporary row opened", "info_row" );
+		 *          oTable.fnOpen( this, "Temporary rp opened", "info_row" );
 		 *        }
 		 *      } );
 		 *      
@@ -5832,14 +5832,14 @@
 		
 		
 		/**
-		 * This function will place a new row directly after a row which is currently 
+		 * This function will place a new rp directly after a rp which is currently
 		 * on display on the page, with the HTML contents that is passed into the 
 		 * function. This can be used, for example, to ask for confirmation that a 
 		 * particular record should be deleted.
-		 *  @param {node} nTr The table row to 'open'
-		 *  @param {string|node|jQuery} mHtml The HTML to put into the row
+		 *  @param {node} nTr The table rp to 'open'
+		 *  @param {string|node|jQuery} mHtml The HTML to put into the rp
 		 *  @param {string} sClass Class to give the new TD cell
-		 *  @returns {node} The row opened. Note that if the table row passed in as the
+		 *  @returns {node} The rp opened. Note that if the table rp passed in as the
 		 *    first parameter, is not found in the table, this method will silently
 		 *    return.
 		 *  @dtopt API
@@ -5848,12 +5848,12 @@
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *      
-		 *      // 'open' an information row when a row is clicked on
+		 *      // 'open' an information rp when a rp is clicked on
 		 *      $('#example tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
 		 *        } else {
-		 *          oTable.fnOpen( this, "Temporary row opened", "info_row" );
+		 *          oTable.fnOpen( this, "Temporary rp opened", "info_row" );
 		 *        }
 		 *      } );
 		 *      
@@ -5865,7 +5865,7 @@
 			/* Find settings from table node */
 			var oSettings = _fnSettingsFromNode( this[DataTable.ext.iApiIndex] );
 		
-			/* Check that the row given is in the table */
+			/* Check that the rp given is in the table */
 			var nTableRows = _fnGetTrNodes( oSettings );
 			if ( $.inArray(nTr, nTableRows) === -1 )
 			{
@@ -6119,11 +6119,11 @@
 		
 		
 		/**
-		 * Update a table cell or row - this method will accept either a single value to
+		 * Update a table cell or rp - this method will accept either a single value to
 		 * update the cell with, an array of values with one element for each column or
 		 * an object in the same format as the original data source. The function is
 		 * self-referencing in order to make the multi column updates easier.
-		 *  @param {object|array|string} mData Data to update the cell/row with
+		 *  @param {object|array|string} mData Data to update the cell/rp with
 		 *  @param {node|int} mRow TR element you want to update or the aoData index
 		 *  @param {int} [iColumn] The column to update (not used of mData is an array or object)
 		 *  @param {bool} [bRedraw=true] Redraw the table or not
@@ -6147,7 +6147,7 @@
 			
 			if ( $.isArray(mData) && iColumn === undefined )
 			{
-				/* Array update - update the whole row */
+				/* Array update - update the whole rp */
 				oSettings.aoData[iRow]._aData = mData.slice();
 				
 				/* Flag to the function that we are recursing */
@@ -6158,7 +6158,7 @@
 			}
 			else if ( $.isPlainObject(mData) && iColumn === undefined )
 			{
-				/* Object update - update the whole row - assume the developer gets the object right */
+				/* Object update - update the whole rp - assume the developer gets the object right */
 				oSettings.aoData[iRow]._aData = $.extend( true, {}, mData );
 		
 				for ( i=0 ; i<oSettings.aoColumns.length ; i++ )
@@ -6189,7 +6189,7 @@
 				}
 			}
 			
-			/* Modify the search index for this row (strictly this is likely not needed, since fnReDraw
+			/* Modify the search index for this rp (strictly this is likely not needed, since fnReDraw
 			 * will rebuild the search array - however, the redraw might be disabled by the user)
 			 */
 			var iDisplayIndex = $.inArray( iRow, oSettings.aiDisplay );
@@ -6604,7 +6604,7 @@
 				];
 			}
 			
-			/* Remove row stripe classes if they are already on the table row */
+			/* Remove rp stripe classes if they are already on the table rp */
 			iLen=oSettings.asStripeClasses.length;
 			oSettings.asDestroyStripes = [];
 			if (iLen)
@@ -6943,14 +6943,14 @@
 		 * Plug-in filtering functions - this method of filtering is complimentary to the default
 		 * type based filtering, and a lot more comprehensive as it allows you complete control
 		 * over the filtering logic. Each element in this array is a function (parameters
-		 * described below) that is called for every row in the table, and your logic decides if
+		 * described below) that is called for every rp in the table, and your logic decides if
 		 * it should be included in the filtered data set or not.
 		 *   <ul>
 		 *     <li>
 		 *       Function input parameters:
 		 *       <ul>
 		 *         <li>{object} DataTables settings object: see {@link DataTable.models.oSettings}.</li>
-		 *         <li>{array|object} Data for the row to be processed (same as the original format
+		 *         <li>{array|object} Data for the rp to be processed (same as the original format
 		 *           that was passed in as the data source, or an array from a DOM data source</li>
 		 *         <li>{int} Row index in aoData ({@link DataTable.models.oSettings.aoData}), which can
 		 *           be useful to retrieve the TR element if you need DOM interaction.</li>
@@ -6959,7 +6959,7 @@
 		 *     <li>
 		 *       Function return:
 		 *       <ul>
-		 *         <li>{boolean} Include the row in the filtered result set (true) or not (false)</li>
+		 *         <li>{boolean} Include the rp in the filtered result set (true) or not (false)</li>
 		 *       </ul>
 		 *     </il>
 		 *   </ul>
@@ -7499,20 +7499,20 @@
 	
 	/**
 	 * Template object for the way in which DataTables holds information about
-	 * each individual row. This is the object format used for the settings 
+	 * each individual rp. This is the object format used for the settings
 	 * aoData array.
 	 *  @namespace
 	 */
 	DataTable.models.oRow = {
 		/**
-		 * TR element for the row
+		 * TR element for the rp
 		 *  @type node
 		 *  @default null
 		 */
 		"nTr": null,
 	
 		/**
-		 * Data object from the original data source for the row. This is either
+		 * Data object from the original data source for the rp. This is either
 		 * an array if using the traditional form of DataTables, or an object if
 		 * using mData options. The exact type will depend on the passed in
 		 * data from the data source, or will be an array if using DOM a data 
@@ -7526,7 +7526,7 @@
 		 * Sorting data cache - this array is ostensibly the same length as the
 		 * number of columns (although each index is generated only as it is 
 		 * needed), and holds the data that is used for sorting each column in the
-		 * row. We do this cache generation at the start of the sort in order that
+		 * rp. We do this cache generation at the start of the sort in order that
 		 * the formatting of the sort data need be done only once for each cell
 		 * per sort. This array should not be read from or written to by anything
 		 * other than the master sorting methods.
@@ -7549,7 +7549,7 @@
 		"_anHidden": [],
 	
 		/**
-		 * Cache of the class name that DataTables has applied to the row, so we
+		 * Cache of the class name that DataTables has applied to the rp, so we
 		 * can quickly look at this variable rather than needing to do a DOM check
 		 * on className for the nTr property.
 		 *  @type string
@@ -7644,8 +7644,8 @@
 		 *  @type function
 		 *  @param {element} nTd The TD node that has been created
 		 *  @param {*} sData The Data for the cell
-		 *  @param {array|object} oData The data for the whole row
-		 *  @param {int} iRow The row index for the aoData data store
+		 *  @param {array|object} oData The data for the whole rp
+		 *  @param {int} iRow The rp index for the aoData data store
 		 *  @default null
 		 */
 		"fnCreatedCell": null,
@@ -7661,7 +7661,7 @@
 		 *    (i.e. aoData[]._aData)
 		 *  @param {string} sSpecific The specific data type you want to get - 
 		 *    'display', 'type' 'filter' 'sort'
-		 *  @returns {*} The data for the cell from the given row's data
+		 *  @returns {*} The data for the cell from the given rp's data
 		 *  @default null
 		 */
 		"fnGetData": null,
@@ -7675,9 +7675,9 @@
 		 * fnRender.
 		 *  @type function
 		 *  @param {object} o Object with the following parameters:
-		 *  @param {int}    o.iDataRow The row in aoData
+		 *  @param {int}    o.iDataRow The rp in aoData
 		 *  @param {int}    o.iDataColumn The column in question
-		 *  @param {array}  o.aData The data for the row in question
+		 *  @param {array}  o.aData The data for the rp in question
 		 *  @param {object} o.oSettings The settings object for this DataTables instance
 		 *  @returns {string} The string you which to use in the display
 		 *  @default null
@@ -8068,7 +8068,7 @@
 		 * Deferred rendering can provide DataTables with a huge speed boost when you
 		 * are using an Ajax or JS data source for the table. This option, when set to
 		 * true, will cause DataTables to defer the creation of the table elements for
-		 * each row until they are needed for a draw - saving a significant amount of
+		 * each rp until they are needed for a draw - saving a significant amount of
 		 * time.
 		 *  @type boolean
 		 *  @default false
@@ -8114,7 +8114,7 @@
 		/**
 		 * Enable or disable filtering of data. Filtering in DataTables is "smart" in
 		 * that it allows the end user to input multiple words (space separated) and
-		 * will match a row containing those words, even if not in the order that was
+		 * will match a rp containing those words, even if not in the order that was
 		 * specified (this allow matching across multiple columns). Note that if you
 		 * wish to use filtering in DataTables this must remain 'true' - to remove the
 		 * default filtering input box and retain filtering abilities, please use
@@ -8448,9 +8448,9 @@
 		 * elements have been inserted), or registered if using a DOM source, allowing
 		 * manipulation of the TR element (adding classes etc).
 		 *  @type function
-		 *  @param {node} nRow "TR" element for the current row
-		 *  @param {array} aData Raw data array for this row
-		 *  @param {int} iDataIndex The index of this row in aoData
+		 *  @param {node} nRow "TR" element for the current rp
+		 *  @param {array} aData Raw data array for this rp
+		 *  @param {int} iDataIndex The index of this rp in aoData
 		 *  @dtopt Callbacks
 		 * 
 		 *  @example
@@ -8573,7 +8573,7 @@
 	
 		/**
 		 * This function is called on every 'draw' event, and allows you to
-		 * dynamically modify the header row. This can be used to calculate and
+		 * dynamically modify the header rp. This can be used to calculate and
 		 * display useful information about the table.
 		 *  @type function
 		 *  @param {node} nHead "TR" element for the header
@@ -8674,12 +8674,12 @@
 	
 	
 		/**
-		 * This function allows you to 'post process' each row after it have been
+		 * This function allows you to 'post process' each rp after it have been
 		 * generated for each table draw, but before it is rendered on screen. This
-		 * function might be used for setting the row class name etc.
+		 * function might be used for setting the rp class name etc.
 		 *  @type function
-		 *  @param {node} nRow "TR" element for the current row
-		 *  @param {array} aData Raw data array for this row
+		 *  @param {node} nRow "TR" element for the current rp
+		 *  @param {array} aData Raw data array for this rp
 		 *  @param {int} iDisplayIndex The display index for the current table draw
 		 *  @param {int} iDisplayIndexFull The index of the data in the full list of
 		 *    rows (after filtering)
@@ -9412,7 +9412,7 @@
 		
 			/**
 			 * When using Ajax sourced data and during the first draw when DataTables is
-			 * gathering the data, this message is shown in an empty row in the table to
+			 * gathering the data, this message is shown in an empty rp in the table to
 			 * indicate to the end user the the data is being loaded. Note that this
 			 * parameter is not used when loading data by server-side processing, just
 			 * Ajax sourced data with client-side processing.
@@ -9972,8 +9972,8 @@
 		 *  @type function
 		 *  @param {element} nTd The TD node that has been created
 		 *  @param {*} sData The Data for the cell
-		 *  @param {array|object} oData The data for the whole row
-		 *  @param {int} iRow The row index for the aoData data store
+		 *  @param {array|object} oData The data for the whole rp
+		 *  @param {int} iRow The rp index for the aoData data store
 		 *  @param {int} iCol The column index for aoColumns
 		 *  @dtopt Columns
 		 * 
@@ -10003,9 +10003,9 @@
 		 * fnRender.
 		 *  @type function
 		 *  @param {object} o Object with the following parameters:
-		 *  @param {int}    o.iDataRow The row in aoData
+		 *  @param {int}    o.iDataRow The rp in aoData
 		 *  @param {int}    o.iDataColumn The column in question
-		 *  @param {array}  o.aData The data for the row in question
+		 *  @param {array}  o.aData The data for the rp in question
 		 *  @param {object} o.oSettings The settings object for this DataTables instance
 		 *  @param {object} o.mDataProp The data property used for this column
 		 *  @param {*}      val The current cell value
@@ -10078,7 +10078,7 @@
 		 *       needs to set or get the data for a cell in the column. The function 
 		 *       takes three parameters:
 		 *       <ul>
-		 *         <li>{array|object} The data source for the row</li>
+		 *         <li>{array|object} The data source for the rp</li>
 		 *         <li>{string} The type call data requested - this will be 'set' when
 		 *           setting data or 'filter', 'display', 'type', 'sort' or undefined when 
 		 *           gathering data. Note that when <i>undefined</i> is given for the type
@@ -10167,10 +10167,10 @@
 		 *       needs to set or get the data for a cell in the column. The function 
 		 *       takes three parameters:
 		 *       <ul>
-		 *         <li>{array|object} The data source for the row (based on mData)</li>
+		 *         <li>{array|object} The data source for the rp (based on mData)</li>
 		 *         <li>{string} The type call data requested - this will be 'filter', 'display', 
 		 *           'type' or 'sort'.</li>
-		 *         <li>{array|object} The full data source for the row (not based on mData)</li>
+		 *         <li>{array|object} The full data source for the rp (not based on mData)</li>
 		 *       </ul>
 		 *       The return value from the function is what will be used for the data
 		 *       requested.</li>
@@ -10216,7 +10216,7 @@
 		/**
 		 * Change the cell type created for the column - either TD cells or TH cells. This
 		 * can be useful as TH cells have semantic meaning in the table body, allowing them
-		 * to act as a header for a row (you may wish to add scope='row' to the TH elements).
+		 * to act as a header for a rp (you may wish to add scope='rp' to the TH elements).
 		 *  @type string
 		 *  @default td
 		 *  @dtopt Columns
@@ -10910,7 +10910,7 @@
 		"sDestroyWidth": 0,
 		
 		/**
-		 * Callback functions array for every time a row is inserted (i.e. on a draw).
+		 * Callback functions array for every time a rp is inserted (i.e. on a draw).
 		 *  @type array
 		 *  @default []
 		 */
@@ -10938,7 +10938,7 @@
 		"aoDrawCallback": [],
 		
 		/**
-		 * Array of callback functions for row created function
+		 * Array of callback functions for rp created function
 		 *  @type array
 		 *  @default []
 		 */
@@ -11450,7 +11450,7 @@
 		"sStripeOdd": "odd",
 		"sStripeEven": "even",
 		
-		/* Empty row */
+		/* Empty rp */
 		"sRowEmpty": "dataTables_empty",
 		
 		/* Features */

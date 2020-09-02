@@ -43,20 +43,20 @@ $(document).ready(function() {
     });
 
     /* Add event listener for opening and closing details
-     * Note that the indicator for showing which row is open is not controlled by DataTables,
+     * Note that the indicator for showing which rp is open is not controlled by DataTables,
      * rather it is done here
      */
     $(document).on('click','#hidden-table-info tbody td img',function () {
         var nTr = $(this).parents('tr')[0];
         if ( oTable.fnIsOpen(nTr) )
         {
-            /* This row is already open - close it */
+            /* This rp is already open - close it */
             this.src = "img/details_open.png";
             oTable.fnClose( nTr );
         }
         else
         {
-            /* Open this row */
+            /* Open this rp */
             this.src = "img/details_close.png";
             oTable.fnOpen( nTr, fnFormatDetails(oTable, nTr), 'details' );
         }

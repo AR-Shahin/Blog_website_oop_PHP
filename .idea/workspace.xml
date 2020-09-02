@@ -20,24 +20,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2f680f-dd33-4e7c-bc6a-ee7d936485ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/Site.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/UserLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/UserLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/classes/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/post.php" afterDir="false" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/.idea/Portfolio_Second_Version.iml" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/.idea/Portfolio_Second_Version.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/admin/insert.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/admin/insert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Helper.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Mail.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/aboutsection.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/aboutsection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/contactsection.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/contactsection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/herosection.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/herosection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/servicesection.php" afterPath="$PROJECT_DIR$/../Portfolio_Second_Version/pages/servicesection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blog_project.iml" afterPath="$PROJECT_DIR$/.idea/blog_project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/advanced-datatable/media/css/demo_table.css" afterPath="$PROJECT_DIR$/admin/assets/advanced-datatable/media/css/demo_table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/advanced-datatable/media/js/jquery.dataTables.js" afterPath="$PROJECT_DIR$/admin/assets/advanced-datatable/media/js/jquery.dataTables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/data-tables/DT_bootstrap.js" afterPath="$PROJECT_DIR$/admin/assets/data-tables/DT_bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/data-tables/jquery.dataTables.js" afterPath="$PROJECT_DIR$/admin/assets/data-tables/jquery.dataTables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" afterPath="$PROJECT_DIR$/admin/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/morris.js-0.4.3/morris.min.js" afterPath="$PROJECT_DIR$/admin/assets/morris.js-0.4.3/morris.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/assets/summernote/dist/summernote.min.js" afterPath="$PROJECT_DIR$/admin/assets/summernote/dist/summernote.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/css/table-responsive.css" afterPath="$PROJECT_DIR$/admin/css/table-responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/header.php" afterPath="$PROJECT_DIR$/admin/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/insert.php" afterPath="$PROJECT_DIR$/admin/insert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/dynamic_table_init.js" afterPath="$PROJECT_DIR$/admin/js/dynamic_table_init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/jquery-ui-1.9.2.custom.min.js" afterPath="$PROJECT_DIR$/admin/js/jquery-ui-1.9.2.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/admin/js/jquery-ui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/classes/post.php" afterPath="$PROJECT_DIR$/app/classes/post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singlepage.php" afterPath="$PROJECT_DIR$/singlepage.php" />
     </list>
+    <ignored path="$PROJECT_DIR$/vendor/composer/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="servicesection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/pages/servicesection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="80" lean-forward="false" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aboutsection.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/pages/aboutsection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,16 +113,118 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Portfolio_Second_Version" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/classes/Post.php" />
+        <option value="$PROJECT_DIR$/singlepage.php" />
+        <option value="$PROJECT_DIR$/../Portfolio_Second_Version/pages/servicesection.php" />
+        <option value="$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Helper.php" />
+        <option value="$PROJECT_DIR$/../Portfolio_Second_Version/pages/aboutsection.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
   <component name="ProjectId" id="1ffamJUxESq4kec5PrlskOtAZS6" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio_Second_Version" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio_Second_Version" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio_Second_Version" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio_Second_Version" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -72,11 +240,96 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xammp\htdocs\PHP_Learning\blog_project\app\classes" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -128,23 +381,62 @@
       <workItem from="1597559287261" duration="189000" />
       <workItem from="1597559535321" duration="988000" />
       <workItem from="1597583666226" duration="183000" />
+      <workItem from="1597990885596" duration="200000" />
+      <workItem from="1597999636629" duration="3000" />
+      <workItem from="1598020109035" duration="10000" />
+      <workItem from="1598967599779" duration="1467000" />
+      <workItem from="1598972563244" duration="783000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2250000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14348462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
     <state x="160" y="0" key="#CLI_Interpreters" timestamp="1596957935699">
@@ -163,10 +455,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="347" y="66" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1597503318876" />
-    <state x="410" y="66" key="FileChooserDialogImpl" timestamp="1597583847754">
+    <state x="410" y="66" key="FileChooserDialogImpl" timestamp="1598020117462">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="410" y="66" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1597583847754" />
+    <state x="410" y="66" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1598020117462" />
     <state x="414" y="82" key="NewPhpClassDialog" timestamp="1597385957814">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -185,5 +477,133 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="623" height="498" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1596904629832" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2033">
+          <caret line="107" column="11" lean-forward="false" selection-start-line="107" selection-start-column="11" selection-end-line="129" selection-end-column="22" />
+          <folding>
+            <marker date="1597497181601" expanded="true" signature="5593:5725" ph="SELECT blog.... blog" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/classes/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4750">
+          <caret line="252" column="25" lean-forward="false" selection-start-line="252" selection-start-column="25" selection-end-line="252" selection-end-column="25" />
+          <folding>
+            <marker date="1598968762145" expanded="true" signature="829:986" ph="INSERT INTO `blog`... " />
+            <marker date="1598968762145" expanded="true" signature="1652:1771" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="2021:2162" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="2391:2530" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="2759:2812" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3038:3089" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3313:3366" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3590:3641" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3865:3897" ph="DELETE FROM " />
+            <marker date="1598968762145" expanded="true" signature="4394:4513" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="4839:4879" ph="SELECT `imag... blog" />
+            <marker date="1598968762145" expanded="true" signature="5576:5717" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="6146:6308" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="6888:6908" ph="SELECT * FRO... blog" />
+            <marker date="1598968762145" expanded="true" signature="7205:7242" ph="SELECT * FRO... blog" />
+            <marker date="1598968762145" expanded="true" signature="7518:7661" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="8005:8161" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="8757:8895" ph="SELECT blog.... blog" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/singlepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1786">
+          <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/classes/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="252" column="25" lean-forward="false" selection-start-line="252" selection-start-column="25" selection-end-line="252" selection-end-column="25" />
+          <folding>
+            <marker date="1598968762145" expanded="true" signature="829:986" ph="INSERT INTO `blog`... " />
+            <marker date="1598968762145" expanded="true" signature="1652:1771" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="2021:2162" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="2391:2530" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="2759:2812" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3038:3089" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3313:3366" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3590:3641" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="3865:3897" ph="DELETE FROM " />
+            <marker date="1598968762145" expanded="true" signature="4394:4513" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="4839:4879" ph="SELECT `imag... blog" />
+            <marker date="1598968762145" expanded="true" signature="5576:5717" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="6146:6308" ph="UPDATE `blog... " />
+            <marker date="1598968762145" expanded="true" signature="6888:6908" ph="SELECT * FRO... blog" />
+            <marker date="1598968762145" expanded="true" signature="7205:7242" ph="SELECT * FRO... blog" />
+            <marker date="1598968762145" expanded="true" signature="7518:7661" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="8005:8161" ph="SELECT blog.... blog" />
+            <marker date="1598968762145" expanded="true" signature="8757:8895" ph="SELECT blog.... blog" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/singlepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="91" column="16" lean-forward="false" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="107" column="11" lean-forward="false" selection-start-line="107" selection-start-column="11" selection-end-line="129" selection-end-column="22" />
+          <folding>
+            <marker date="1597497181601" expanded="true" signature="5593:5725" ph="SELECT blog.... blog" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/pages/servicesection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="80" lean-forward="false" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/app/classes/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Portfolio_Second_Version/pages/aboutsection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

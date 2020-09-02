@@ -56,5 +56,41 @@ if(isset($_GET['id'])){
         </div><!-- end title -->
     </div><!-- end page-wrapper -->
 </div>
+
 <?php require_once 'sidebar.php'; ?>
+<div class="container">
+    <h3>Related Post</h3>
+    <div class="row">
+        <?php
+        $ob = Post::relatedPost();
+        while ($rp = mysqli_fetch_assoc($ob)) { ?>
+        <div class="col-md-6">
+            <div class="blog-list clearfix">
+                <div class="blog-box row">
+                    <div class="col-md-4">
+                        <div class="post-media">
+                            <a href="singlepage.php?id=<?= $rp['id'] ?>" title="">
+                                <img src="uploads/<?= $rp['image'] ?>" alt="" class="img-fluid w-100">
+                                <div class="hovereffect"></div>
+                            </a>
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+
+                    <div class="blog-meta big-meta col-md-8">
+                        <h4><a href="singlepage.php?id=<?= $rp['id'] ?>" title=""><?= $rp['title'] ?></a></h4>
+                        <p><?php
+                            $txt = $rp['content'];
+                            echo   \App\classes\Helper::textShort("$txt",150);
+                            ?></p>
+                        <small class="firstsmall"><a class="bg-orange" href="singlepage.php?id=<?= $rp['id'] ?>" title="Category"><?= $rp['category_name'] ?></a></small>
+                        <small><a  title="Date and Time"><?= $rp['date'] ?></a></small>
+                        <small><a  title="Author or Media"><?= $rp['admin'] ?></a></small>
+                    </div><!-- end meta -->
+                </div><!-- end blog-box -->
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+<hr>
 <?php require_once 'footer.php'; ?>
