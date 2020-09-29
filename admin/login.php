@@ -7,7 +7,7 @@ if(isset($_POST['login-btn'])){
      $error_txt = $login->userCheck($_POST);
 }
 if(isset($_SESSION['login-success'])){
-    header('location:login.php');
+    header('location:index.php');
 }
 ?>
 
