@@ -39,7 +39,7 @@ class UserLogin
                 $usr = $user_data['username'];
                 $_SESSION['login-success'] = true;
                 $_SESSION['username'] = $usr;
-                header('location:login.php');
+                header('location:index.php');
             }
             else{
                 $error_text = 'Invalid Username or Password ';

@@ -10,6 +10,7 @@ $allCat = Category::activeCategories();
                     <h3 style="display: inline-block;margin-right: 25px;">Add New Post</h3>
                     <span style="font-weight: bold"><?= isset($_SESSION['extError']) ? $_SESSION['extError'] : ''?></span>
                     <span style="font-weight: bold"><?= isset($_SESSION['postInsert']) ? $_SESSION['postInsert'] : ''?></span>
+                     <span style="font-weight: bold"><?= isset($_SESSION['txt']) ? $_SESSION['txt'] : ''?></span>
                 </header>
                 <div class="card-body">
                     <form action="insert.php" method="post" enctype="multipart/form-data">
@@ -90,8 +91,8 @@ $allCat = Category::activeCategories();
 if(isset($_SESSION['extError'])){
     unset($_SESSION['extError']);
 }
-if(isset($_SESSION['postInsert'])){
-    unset($_SESSION['postInsert']);
+if(isset($_SESSION['txt'])){
+    unset($_SESSION['txt']);
 }
 ?>
 

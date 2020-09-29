@@ -9,6 +9,12 @@ if(isset($_POST['cat-btn'])){
    Session::set('txt',"$rtn_txt");
     header('location:addcategory.php');
 }
+if(isset($_POST['post-btn'])){
+    $userOb = new \App\classes\Post();
+   $rtn_txt =  $userOb->addPost($_POST);
+   Session::set('txt',"$rtn_txt");
+    header('location:addpost.php');
+}
 //USER INSERT
 if(isset($_POST['user-btn'])){
     $userOb = new \App\classes\UserLogin();
