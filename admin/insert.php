@@ -3,6 +3,13 @@ require_once '../vendor/autoload.php';
 use App\classes\Session;
 Session::init();
 //USER INSERT
+if(isset($_POST['cat-btn'])){
+    $userOb = new \App\classes\Category();
+   $rtn_txt =  $userOb->addCategory($_POST);
+   Session::set('txt',"$rtn_txt");
+    header('location:addcategory.php');
+}
+//USER INSERT
 if(isset($_POST['user-btn'])){
     $userOb = new \App\classes\UserLogin();
    $rtn_txt =  $userOb->addUser($_POST);

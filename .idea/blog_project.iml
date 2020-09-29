@@ -20,5 +20,9 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="Portfolio_Second_Version" />
+    <orderEntry type="module" module-name="inventory" />
+    <orderEntry type="module" module-name="ajax" />
+    <orderEntry type="module" module-name="loginsystem" />
+    <orderEntry type="module" module-name="pro" />
   </component>
 </module>

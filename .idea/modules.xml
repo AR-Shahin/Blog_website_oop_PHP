@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Portfolio_Second_Version/.idea/Portfolio_Second_Version.iml" filepath="$PROJECT_DIR$/../Portfolio_Second_Version/.idea/Portfolio_Second_Version.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ajax/.idea/ajax.iml" filepath="$PROJECT_DIR$/../ajax/.idea/ajax.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/blog_project.iml" filepath="$PROJECT_DIR$/.idea/blog_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../inventory/.idea/inventory.iml" filepath="$PROJECT_DIR$/../inventory/.idea/inventory.iml" />
+      <module fileurl="file://E:\xammp\htdocs\PHP_Learning\loginsystem\.idea\loginsystem.iml" filepath="E:\xammp\htdocs\PHP_Learning\loginsystem\.idea\loginsystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pro/.idea/pro.iml" filepath="$PROJECT_DIR$/../pro/.idea/pro.iml" />
     </modules>
   </component>
 </project>

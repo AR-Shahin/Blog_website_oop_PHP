@@ -99,7 +99,7 @@ use App\classes\Helper;
             $totalPage = ceil($totalPost/$take);
             if($totalPage < $page)
             {
-                header("location:index.php");
+                header("location:login.php");
             }
             $sql = "SELECT blog.*, categories.category_name FROM blog INNER JOIN categories ON blog.cat_id = categories.id ORDER BY id DESC LIMIT $skip,$take ";
             $post = \App\classes\Post::pagination($sql);

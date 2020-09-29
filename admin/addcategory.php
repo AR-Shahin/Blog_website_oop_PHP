@@ -8,7 +8,7 @@
                     <span style="font-weight: bold"><?= isset($_SESSION['txt']) ? $_SESSION['txt'] : ''?></span>
                 </header>
                 <div class="card-body">
-                    <form action="insert.php" method="get">
+                    <form action="insert.php" method="post">
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">Category Name</label>
                             <div class="col-sm-9">

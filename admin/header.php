@@ -12,7 +12,7 @@ Use App\classes\Mail;
 $name = $_SESSION['username'];
 $userData = UserLogin::loginUserData("$name");
 $title = '';
-if($page == 'index.php'){
+if($page == 'login.php'){
     $title = 'Home';
 }elseif($page == 'addcategory.php' || $page == 'managecategory.php'){
     $title = 'Category';
@@ -286,7 +286,7 @@ else{
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
                         <li>
-                            <a  href="index.php" <?= $page == 'index.php' ? 'class="active"' : '' ?> >
+                            <a  href="index.php" <?= $page == 'login.php' ? 'class="active"' : '' ?> >
                                 <i class="fa fa-dashboard"></i>
                                 <span>Dashboard</span>
                             </a>

@@ -9,7 +9,7 @@ $populer = Post::showPopulerlPost();
 $page = explode('/',$_SERVER['PHP_SELF']);
 $page = end($page);
 $title = '';
-if($page == 'index.php'){
+if($page == 'login.php'){
     $title = 'Home';
 }
 elseif ($page == 'contact.php'){
