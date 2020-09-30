@@ -36,7 +36,7 @@ use App\classes\Helper;
                                         $txt = $catWisepostRow['content'];
                                         echo   \App\classes\Helper::textShort("$txt",250);
                                         ?></p>
-                                    <small class="firstsmall"><a class="bg-orange" href="singlepage.php?id=<?= $catWisepostRow['id'] ?>"" title="Category"><?= $catWisepostRow['category_name'] ?></a></small>
+                                    <small class="firstsmall"><a class="bg-orange" href="singlepage.php?id=<?= $catWisepostRow['id'] ?>" title="Category"><?= $catWisepostRow['category_name'] ?></a></small>
                                     <small><a  title="Date and Time"><?= $catWisepostRow['date'] ?></a></small>
                                     <small><a  title="Author or Media"><?= $catWisepostRow['admin'] ?></a></small>
                                 </div><!-- end meta -->
